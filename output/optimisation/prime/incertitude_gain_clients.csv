@@ -1,0 +1,3 @@
+comparaison,gain_RMSE_EUR,borne_2_5_pct,borne_97_5_pct,clients,repetitions,zero_dans_intervalle
+Procedure imbriquee,0.00540901100271185,-0.1195891524684896,0.1317305691047322,36628,2000,True
+Diagnostic historique,0.04834567038460591,-0.2346738543381278,0.34116532277095346,9157,2000,True

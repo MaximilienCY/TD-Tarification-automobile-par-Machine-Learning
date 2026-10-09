@@ -1,0 +1,10 @@
+entree_preparee,coefficient_log,exp_coefficient
+lineaire__anciennete_vehicule,-0.06087530028471528,0.9409405674813567
+categories__type_contrat_Maxi,0.10940807886180548,1.1156175173898124
+categories__type_contrat_Median1,0.00553294544377038,1.0055482804559621
+categories__type_contrat_Median2,-0.0967134392198141,0.9078161133569371
+categories__type_contrat_Mini,-0.01809591436478757,0.9820668335243459
+categories__utilisation_Professional,0.06555282225033443,1.0677491367361078
+categories__utilisation_Retired,-0.051112392989341976,0.9501718718737605
+categories__utilisation_WorkPrivate,0.03575878668100506,1.0364058214494334
+categories__utilisation_infrequent_sklearn,-0.05006754522102387,0.9511651756688669

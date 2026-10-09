@@ -1,0 +1,142 @@
+{
+  "configs": [
+    {
+      "name": "Gamma_reference_3_variables",
+      "alpha": 0.1
+    },
+    {
+      "name": "Gamma_3_variables_a0.001",
+      "alpha": 0.001
+    },
+    {
+      "name": "Gamma_3_variables_a0.01",
+      "alpha": 0.01
+    },
+    {
+      "name": "Gamma_3_variables_a1.0",
+      "alpha": 1.0
+    },
+    {
+      "name": "Gamma_3_variables_a10.0",
+      "alpha": 10.0
+    },
+    {
+      "name": "Gamma_3_variables_a100.0",
+      "alpha": 100.0
+    },
+    {
+      "name": "Gamma_compact_a0.01",
+      "alpha": 0.01,
+      "compact": true
+    },
+    {
+      "name": "Gamma_compact_a0.1",
+      "alpha": 0.1,
+      "compact": true
+    },
+    {
+      "name": "Gamma_compact_a1.0",
+      "alpha": 1.0,
+      "compact": true
+    },
+    {
+      "name": "Gamma_splines_a0.01",
+      "alpha": 0.01,
+      "compact": true,
+      "splines": true
+    },
+    {
+      "name": "Gamma_splines_a0.1",
+      "alpha": 0.1,
+      "compact": true,
+      "splines": true
+    },
+    {
+      "name": "Gamma_splines_a1.0",
+      "alpha": 1.0,
+      "compact": true,
+      "splines": true
+    },
+    {
+      "name": "Gamma_interactions_a0.01",
+      "alpha": 0.01,
+      "compact": true,
+      "splines": true,
+      "interaction": true
+    },
+    {
+      "name": "Gamma_interactions_a0.1",
+      "alpha": 0.1,
+      "compact": true,
+      "splines": true,
+      "interaction": true
+    },
+    {
+      "name": "Gamma_interactions_a1.0",
+      "alpha": 1.0,
+      "compact": true,
+      "splines": true,
+      "interaction": true
+    },
+    {
+      "name": "Gamma_departement_a0.01",
+      "alpha": 0.01,
+      "compact": true,
+      "splines": true,
+      "geo": true
+    },
+    {
+      "name": "Gamma_departement_a0.1",
+      "alpha": 0.1,
+      "compact": true,
+      "splines": true,
+      "geo": true
+    },
+    {
+      "name": "Gamma_departement_a1.0",
+      "alpha": 1.0,
+      "compact": true,
+      "splines": true,
+      "geo": true
+    },
+    {
+      "name": "Gamma_cout_modele_lisse20_a0.1",
+      "alpha": 0.1,
+      "compact": true,
+      "target": true,
+      "lissage": 20
+    },
+    {
+      "name": "Gamma_cout_modele_lisse20_a1.0",
+      "alpha": 1.0,
+      "compact": true,
+      "target": true,
+      "lissage": 20
+    },
+    {
+      "name": "Gamma_cout_modele_lisse100_a0.1",
+      "alpha": 0.1,
+      "compact": true,
+      "target": true,
+      "lissage": 100
+    },
+    {
+      "name": "Gamma_cout_modele_lisse100_a1.0",
+      "alpha": 1.0,
+      "compact": true,
+      "target": true,
+      "lissage": 100
+    },
+    {
+      "name": "Gamma_vehicules_regroupees",
+      "alpha": 1.0,
+      "compact": true,
+      "vehicules": true,
+      "rare": 50
+    }
+  ],
+  "sha256_data": {
+    "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+    "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+  }
+}

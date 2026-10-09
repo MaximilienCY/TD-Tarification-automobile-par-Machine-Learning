@@ -1,0 +1,189 @@
+{
+  "configs": [
+    {
+      "name": "Logistique_reference",
+      "kind": "reference"
+    },
+    {
+      "name": "Logistique_lineaire_prix_C0.1",
+      "kind": "logistique",
+      "C": 0.1,
+      "prix": true
+    },
+    {
+      "name": "Logistique_lineaire_prix_C1.0",
+      "kind": "logistique",
+      "C": 1.0,
+      "prix": true
+    },
+    {
+      "name": "Logistique_splines_prix_C0.1",
+      "kind": "logistique",
+      "C": 0.1,
+      "prix": true,
+      "splines": true
+    },
+    {
+      "name": "Logistique_splines_prix_C1.0",
+      "kind": "logistique",
+      "C": 1.0,
+      "prix": true,
+      "splines": true
+    },
+    {
+      "name": "Logistique_splines_interactions_C0.1",
+      "kind": "logistique",
+      "C": 0.1,
+      "prix": true,
+      "splines": true,
+      "interaction": true
+    },
+    {
+      "name": "Logistique_splines_interactions_C1.0",
+      "kind": "logistique",
+      "C": 1.0,
+      "prix": true,
+      "splines": true,
+      "interaction": true
+    },
+    {
+      "name": "Logistique_splines_geo_vehicules_C0.1",
+      "kind": "logistique",
+      "C": 0.1,
+      "prix": true,
+      "splines": true,
+      "geographie": true,
+      "vehicules": true
+    },
+    {
+      "name": "Logistique_splines_geo_vehicules_C1.0",
+      "kind": "logistique",
+      "C": 1.0,
+      "prix": true,
+      "splines": true,
+      "geographie": true,
+      "vehicules": true
+    },
+    {
+      "name": "Boosting_prudent",
+      "kind": "boosting",
+      "leaves": 3,
+      "iterations": 200,
+      "min_leaf": 300,
+      "l2": 5,
+      "lr": 0.05,
+      "rare": 100
+    },
+    {
+      "name": "Boosting_souple",
+      "kind": "boosting",
+      "leaves": 7,
+      "iterations": 250,
+      "min_leaf": 200,
+      "l2": 5,
+      "lr": 0.05,
+      "rare": 100
+    },
+    {
+      "name": "Boosting_regulier",
+      "kind": "boosting",
+      "leaves": 7,
+      "iterations": 350,
+      "min_leaf": 300,
+      "l2": 20,
+      "lr": 0.05,
+      "rare": 100
+    },
+    {
+      "name": "Boosting_interactions",
+      "kind": "boosting",
+      "leaves": 15,
+      "iterations": 200,
+      "min_leaf": 300,
+      "l2": 20,
+      "lr": 0.05,
+      "rare": 100
+    },
+    {
+      "name": "Boosting_souple_calibre",
+      "kind": "calibration",
+      "base": {
+        "name": "Boosting_souple",
+        "kind": "boosting",
+        "leaves": 7,
+        "iterations": 250,
+        "min_leaf": 200,
+        "l2": 5,
+        "lr": 0.05,
+        "rare": 100
+      }
+    },
+    {
+      "name": "Melange_logistique_boosting_0.25",
+      "kind": "melange",
+      "membres": [
+        {
+          "name": "Logistique_reference",
+          "kind": "reference"
+        },
+        {
+          "name": "Boosting_souple",
+          "kind": "boosting",
+          "leaves": 7,
+          "iterations": 250,
+          "min_leaf": 200,
+          "l2": 5,
+          "lr": 0.05,
+          "rare": 100
+        }
+      ],
+      "poids": 0.25
+    },
+    {
+      "name": "Melange_logistique_boosting_0.5",
+      "kind": "melange",
+      "membres": [
+        {
+          "name": "Logistique_reference",
+          "kind": "reference"
+        },
+        {
+          "name": "Boosting_souple",
+          "kind": "boosting",
+          "leaves": 7,
+          "iterations": 250,
+          "min_leaf": 200,
+          "l2": 5,
+          "lr": 0.05,
+          "rare": 100
+        }
+      ],
+      "poids": 0.5
+    },
+    {
+      "name": "Melange_logistique_boosting_0.75",
+      "kind": "melange",
+      "membres": [
+        {
+          "name": "Logistique_reference",
+          "kind": "reference"
+        },
+        {
+          "name": "Boosting_souple",
+          "kind": "boosting",
+          "leaves": 7,
+          "iterations": 250,
+          "min_leaf": 200,
+          "l2": 5,
+          "lr": 0.05,
+          "rare": 100
+        }
+      ],
+      "poids": 0.75
+    }
+  ],
+  "sha256_data": {
+    "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+    "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+  }
+}

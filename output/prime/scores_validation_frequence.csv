@@ -1,0 +1,2 @@
+modele,log_loss,Brier,AUC,sinistres_predits,sinistres_observes
+Logistique_C_0.1,0.20746657842178615,0.05227493228445543,0.6721412698203978,591.6122739918924,565

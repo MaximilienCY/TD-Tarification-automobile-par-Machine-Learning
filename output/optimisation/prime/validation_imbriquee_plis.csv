@@ -1,0 +1,4 @@
+pli_externe,frequence,gravite,contrats_evalues,RMSE_selection,RMSE_reference
+1,Logistique_splines_interactions_C0.1,Gamma_reference_3_variables,13338,571.334343063394,571.3400278454154
+2,Melange_logistique_boosting_0.75,Gamma_reference_3_variables,13338,550.5056124059051,550.5417613897197
+3,Logistique_reference,Gamma_3_variables_a1.0,13337,528.4657398591921,528.438832989729

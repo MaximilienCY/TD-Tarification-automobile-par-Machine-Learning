@@ -1,0 +1,22 @@
+{
+  "modele_audite": "LogisticRegression C=0.1 du notebook du partenaire",
+  "source": "frequence_regression_logisitique.ipynb",
+  "sha256_source": "cb827ce47c3da27af28ecae78073b24ed7120fb1228ab65398566115fe9aed55",
+  "contrats_apprentissage": 39999,
+  "contrats_validation": 10001,
+  "log_loss_originale": 0.2137486014489846,
+  "log_loss_taux_moyen": 0.2225259858162194,
+  "gain_log_loss_vs_taux_moyen_pct": 3.94443117959441,
+  "auc_originale": 0.6567489064516082,
+  "sinistres_prevus": 583.2207533806629,
+  "sinistres_observes": 584,
+  "clients_partages_entre_plis_encodage_original": 2540,
+  "contrats_concernes_encodage": 5322,
+  "log_loss_corrigee_memes_clients": 0.21383388486901714,
+  "gain_log_loss_correction": -8.528342003252809e-05,
+  "intervalle_bootstrap_95_gain_correction": [
+    -0.00019125577386202116,
+    2.585224853993757e-05
+  ],
+  "limite": "validation historique ; bootstrap conditionnel, sans réapprentissage ni nouvelle sélection"
+}

@@ -1,0 +1,136 @@
+{
+  "formule": "prime = probabilite_sinistre * montant_conditionnel",
+  "frequence": {
+    "famille": "LogisticRegression",
+    "C": 0.1,
+    "max_iter": 2000,
+    "lissage": 100,
+    "seuil_rare": 50,
+    "encodage": "5 plis groupes par client, prior hors pli",
+    "variables_brutes": [
+      "bonus",
+      "type_contrat",
+      "duree_contrat",
+      "anciennete_info",
+      "freq_paiement",
+      "paiement",
+      "utilisation",
+      "code_postal",
+      "conducteur2",
+      "age_conducteur1",
+      "age_conducteur2",
+      "anciennete_permis1",
+      "anciennete_permis2",
+      "anciennete_vehicule",
+      "cylindre_vehicule",
+      "din_vehicule",
+      "essence_vehicule",
+      "marque_vehicule",
+      "modele_vehicule",
+      "debut_vente_vehicule",
+      "fin_vente_vehicule",
+      "vitesse_vehicule",
+      "type_vehicule",
+      "prix_vehicule",
+      "poids_vehicule"
+    ],
+    "colonnes_encodees": [
+      "bonus",
+      "duree_contrat",
+      "anciennete_info",
+      "age_conducteur1",
+      "anciennete_permis2",
+      "anciennete_vehicule",
+      "cylindre_vehicule",
+      "din_vehicule",
+      "marque_vehicule",
+      "modele_vehicule",
+      "poids_vehicule",
+      "departement",
+      "type_contrat_Median1",
+      "type_contrat_Median2",
+      "type_contrat_Mini",
+      "freq_paiement_Biannual",
+      "freq_paiement_Monthly",
+      "freq_paiement_Quarterly",
+      "paiement_Yes",
+      "utilisation_Autre",
+      "utilisation_Professional",
+      "utilisation_Retired",
+      "conducteur2_Yes",
+      "essence_vehicule_Autre",
+      "essence_vehicule_Gasoline",
+      "type_vehicule_Commercial"
+    ]
+  },
+  "gravite": {
+    "famille": "GammaRegressor",
+    "lien": "log",
+    "alpha": 0.1,
+    "variables": [
+      "type_contrat",
+      "anciennete_vehicule",
+      "utilisation"
+    ],
+    "numeriques": [
+      "anciennete_vehicule"
+    ],
+    "categorielles": [
+      "type_contrat",
+      "utilisation"
+    ],
+    "colonnes_brutes_necessaires": [
+      "anciennete_vehicule",
+      "type_contrat",
+      "utilisation"
+    ],
+    "min_frequency": 20,
+    "solver": "lbfgs",
+    "max_iter": 3000,
+    "tol": 1e-05
+  },
+  "partition_validation": {
+    "methode": "GroupShuffleSplit",
+    "test_size": 0.2,
+    "seed": 42,
+    "contrats_apprentissage": 40013,
+    "contrats_validation": 9987,
+    "sinistres_apprentissage": 2352,
+    "historique_deja_examinee": true
+  },
+  "validation_prime": {
+    "RMSE_EUR": 507.6470169433955,
+    "MSE_EUR2": 257705.49381152805,
+    "MAE_EUR": 190.37736144751398,
+    "biais_moyen_EUR": 2.692806114616636,
+    "ratio_cout_predit_observe": 1.0264570426045534,
+    "gain_RMSE_vs_constante_pct": 0.7467700766858099
+  },
+  "entrainement_final": {
+    "contrats_frequence": 50000,
+    "sinistres_gravite": 2917
+  },
+  "identifiants_soumission": {
+    "mode": "index",
+    "confirmation_utilisateur": true,
+    "sample_submission_verifie": false,
+    "colonne": "index",
+    "colonnes_csv": [
+      "index",
+      "pred"
+    ]
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "cloudpickle": "3.0.0"
+  },
+  "sha256": {
+    "Data/train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+    "Data/test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569",
+    "frequence_regression_logisitique.ipynb": "cb827ce47c3da27af28ecae78073b24ed7120fb1228ab65398566115fe9aed55",
+    "modele_gravite.ipynb": "d1681374685d1a81c98cd6f99500de711fa4d2807336b502aeb0c661cfd69199"
+  }
+}

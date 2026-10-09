@@ -1,0 +1,11 @@
+# Versions effectivement utilisées pour les notebooks optimisés et les modèles sauvegardés.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+cloudpickle==3.0.0
+threadpoolctl==3.7.0
+ipython==8.20.0
+nbformat==5.9.1
+ipykernel==6.29.3

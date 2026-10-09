@@ -1,0 +1,121 @@
+{
+  "frequence": {
+    "name": "Melange_logistique_boosting_0.75",
+    "kind": "melange",
+    "membres": [
+      {
+        "name": "Logistique_reference",
+        "kind": "reference"
+      },
+      {
+        "name": "Boosting_souple",
+        "kind": "boosting",
+        "leaves": 7,
+        "iterations": 250,
+        "min_leaf": 200,
+        "l2": 5,
+        "lr": 0.05,
+        "rare": 100
+      }
+    ],
+    "poids": 0.75
+  },
+  "gravite": {
+    "name": "Gamma_3_variables_a0.01",
+    "alpha": 0.01
+  },
+  "critere": "MSE de prime hors pli sur 5 plis clients du developpement",
+  "nombre_paires_comparees": 391,
+  "RMSE_OOF_selection": 550.2071927040317,
+  "validation_imbriquee": [
+    {
+      "procedure": "Selection_paire_imbriquee",
+      "RMSE": 550.3808292643129
+    },
+    {
+      "procedure": "Paire_reference_fixe",
+      "RMSE": 550.3862382753156
+    },
+    {
+      "procedure": "Prime_constante",
+      "RMSE": 553.5449171163672
+    }
+  ],
+  "validation_historique": {
+    "Paire_optimisee": {
+      "RMSE_EUR": 507.5986712730109,
+      "MSE_EUR2": 257656.4110781262,
+      "MAE_EUR": 190.2482271354716,
+      "biais_EUR": 2.636361639301791,
+      "ratio_total": 1.0259024709701192
+    },
+    "Paire_precedente": {
+      "RMSE_EUR": 507.6470169433955,
+      "MSE_EUR2": 257705.49381152805,
+      "MAE_EUR": 190.37736144751398,
+      "biais_EUR": 2.692806114616636,
+      "ratio_total": 1.0264570426045534
+    },
+    "Prime_constante": {
+      "RMSE_EUR": 511.46649568544797,
+      "MSE_EUR2": 261597.97620875234,
+      "MAE_EUR": 193.80545437682184,
+      "biais_EUR": 1.9856416555477456,
+      "ratio_total": 1.0195090933554571
+    }
+  },
+  "validation_historique_deja_examinee": true,
+  "composantes_validation_historique": {
+    "log_loss_frequence": 0.20754951420019632,
+    "Brier_frequence": 0.05227338050864717,
+    "AUC_frequence": 0.6710748521160229,
+    "RMSE_gravite_sinistres": 1245.7166171228669
+  },
+  "effectifs_finaux": {
+    "frequence": 50000,
+    "gravite": 2917,
+    "prospects": 50000
+  },
+  "colonnes_soumission": [
+    "index",
+    "pred"
+  ],
+  "identifiants_confirmes_par_utilisateur": true,
+  "versions": {
+    "python": "3.12.3",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "cloudpickle": "3.0.0"
+  },
+  "sha256_data": {
+    "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+    "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+  },
+  "limites": [
+    "Meilleure paire parmi les candidats testes, pas optimum universel.",
+    "La validation imbriquee concerne le developpement deja explore ; elle nefface pas les choix humains anterieurs.",
+    "Les scores historiques ne sont pas des scores Kaggle."
+  ],
+  "incertitude_gain_conditionnelle": [
+    {
+      "comparaison": "Procedure imbriquee",
+      "gain_RMSE_EUR": 0.00540901100271185,
+      "borne_2_5_pct": -0.1195891524684896,
+      "borne_97_5_pct": 0.1317305691047322,
+      "clients": 36628,
+      "repetitions": 2000,
+      "zero_dans_intervalle": true
+    },
+    {
+      "comparaison": "Diagnostic historique",
+      "gain_RMSE_EUR": 0.04834567038460591,
+      "borne_2_5_pct": -0.2346738543381278,
+      "borne_97_5_pct": 0.34116532277095346,
+      "clients": 9157,
+      "repetitions": 2000,
+      "zero_dans_intervalle": true
+    }
+  ],
+  "part_erreur_top_1_pct_sinistres": 0.26229412500976157
+}
