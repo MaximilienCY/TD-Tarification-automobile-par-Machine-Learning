@@ -1,0 +1,5 @@
+pli_externe,variante,alpha,sinistres_test,RMSE_Gamma,RMSE_moyenne
+1,Minimal_contrat_vehicule,0.1,589,1603.4578972679326,1615.108744426688
+2,Metier_compact_sans_geo,0.01,588,1254.369584922048,1264.7344906414671
+3,Minimal_contrat_vehicule,0.1,589,1252.8130094533935,1257.2103876384779
+4,Minimal_contrat_vehicule,0.1,586,1810.423124907798,1827.865986412916

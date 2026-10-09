@@ -1,0 +1,27 @@
+variable,predicteur_retenu,necessaire_entree_brute,decision
+bonus,False,False,Exclue du modèle sélectionné
+type_contrat,True,True,Conservée
+duree_contrat,False,False,Exclue du modèle sélectionné
+anciennete_info,False,False,Exclue du modèle sélectionné
+freq_paiement,False,False,Exclue du modèle sélectionné
+paiement,False,False,Exclue du modèle sélectionné
+utilisation,True,True,Conservée
+code_postal,False,False,Exclue du modèle sélectionné
+conducteur2,False,False,Exclue du modèle sélectionné
+age_conducteur1,False,False,Exclue du modèle sélectionné
+age_conducteur2,False,False,Exclue du modèle sélectionné
+anciennete_permis1,False,False,Exclue du modèle sélectionné
+anciennete_permis2,False,False,Exclue du modèle sélectionné
+anciennete_vehicule,True,True,Conservée
+cylindre_vehicule,False,False,Exclue du modèle sélectionné
+din_vehicule,False,False,Exclue du modèle sélectionné
+essence_vehicule,False,False,Exclue du modèle sélectionné
+marque_vehicule,False,False,Exclue du modèle sélectionné
+modele_vehicule,False,False,Exclue du modèle sélectionné
+debut_vente_vehicule,False,False,Exclue du modèle sélectionné
+fin_vente_vehicule,False,False,Exclue du modèle sélectionné
+vitesse_vehicule,False,False,Exclue du modèle sélectionné
+type_vehicule,False,False,Exclue du modèle sélectionné
+prix_vehicule,False,False,Exclue du modèle sélectionné
+poids_vehicule,False,False,Exclue du modèle sélectionné
+departement,False,False,Exclue du modèle sélectionné

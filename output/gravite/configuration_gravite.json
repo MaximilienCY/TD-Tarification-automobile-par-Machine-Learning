@@ -1,0 +1,42 @@
+{
+  "famille": "GammaRegressor",
+  "lien": "log",
+  "variante": "Minimal_contrat_vehicule",
+  "alpha": 0.1,
+  "variables": [
+    "type_contrat",
+    "anciennete_vehicule",
+    "utilisation"
+  ],
+  "numeriques": [
+    "anciennete_vehicule"
+  ],
+  "categorielles": [
+    "type_contrat",
+    "utilisation"
+  ],
+  "colonnes_brutes_necessaires": [
+    "anciennete_vehicule",
+    "type_contrat",
+    "utilisation"
+  ],
+  "min_frequency": 20,
+  "max_iter": 3000,
+  "tol": 1e-05,
+  "solver": "lbfgs",
+  "seed_partition": 42,
+  "critere_selection": "RMSE moyen, 5 plis clients sur apprentissage local",
+  "RMSE_CV_selection": 1491.1834131448607,
+  "RMSE_CV_imbrique_procedure": 1498.9651489218277,
+  "RMSE_CV_imbrique_moyenne": 1510.427237375134,
+  "validation_historique_deja_examinee": true,
+  "versions": {
+    "python": "3.12.3",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1",
+    "cloudpickle": "3.0.0"
+  },
+  "sha256_train": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+  "sha256_test": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+}
