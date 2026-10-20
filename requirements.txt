@@ -1,14 +1,10 @@
-# Python 3.12; direct dependencies tested in this project.
+# Python 3.12 — versions de l'environnement tarification-auto
 numpy==2.5.3
 pandas==3.0.6
 scipy==1.18.1
 scikit-learn==1.9.1
-catboost==1.2.10
-lightgbm==4.7.0
 matplotlib==3.11.2
-joblib==1.6.0
-threadpoolctl==3.7.0
-nbformat==5.11.1
-nbclient==0.11.0
+seaborn==0.13.2
+jupyter==1.1.1
 ipykernel==7.4.0
-pytest==9.1.1
+nbconvert==7.17.1

@@ -1,6 +1,0 @@
-# Isolated optional TabPFN-v2 benchmark. Install CUDA torch 2.7.1 first.
-tabpfn==2.2.1
-numpy==2.2.6
-pandas==2.2.3
-scikit-learn==1.6.1
-scipy==1.15.3
