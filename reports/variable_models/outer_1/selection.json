@@ -1,0 +1,114 @@
+{
+  "choice": {
+    "candidate": 13,
+    "weight": 0.5,
+    "selection_RMSE": 527.7444810721959,
+    "incumbent_RMSE": 527.7653951678471
+  },
+  "catalogue": [
+    {
+      "kind": "ridge",
+      "panel": "vehicle",
+      "alpha": 10.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "vehicle",
+      "alpha": 100.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "vehicle",
+      "alpha": 1000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "vehicle",
+      "alpha": 10000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "driver",
+      "alpha": 10.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "driver",
+      "alpha": 100.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "driver",
+      "alpha": 1000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "driver",
+      "alpha": 10000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "contract",
+      "alpha": 10.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "contract",
+      "alpha": 100.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "contract",
+      "alpha": 1000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "contract",
+      "alpha": 10000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "all",
+      "alpha": 10.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "all",
+      "alpha": 100.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "all",
+      "alpha": 1000.0
+    },
+    {
+      "kind": "ridge",
+      "panel": "all",
+      "alpha": 10000.0
+    },
+    {
+      "kind": "xgb",
+      "panel": "all",
+      "depth": 1,
+      "trees": 150
+    },
+    {
+      "kind": "xgb",
+      "panel": "all",
+      "depth": 1,
+      "trees": 400
+    },
+    {
+      "kind": "xgb",
+      "panel": "all",
+      "depth": 2,
+      "trees": 150
+    },
+    {
+      "kind": "xgb",
+      "panel": "all",
+      "depth": 2,
+      "trees": 400
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "baseline_RMSE": 550.0657808597489,
+  "results": [
+    {
+      "features": "core",
+      "weight": 0.25,
+      "RMSE": 550.0699755981921
+    },
+    {
+      "features": "compact",
+      "weight": 0.25,
+      "RMSE": 550.0758644608308
+    },
+    {
+      "features": "core",
+      "weight": 0.5,
+      "RMSE": 550.085895987586
+    },
+    {
+      "features": "compact",
+      "weight": 0.5,
+      "RMSE": 550.097867770078
+    },
+    {
+      "features": "core",
+      "weight": 0.75,
+      "RMSE": 550.1135410099034
+    },
+    {
+      "features": "compact",
+      "weight": 0.75,
+      "RMSE": 550.131789357253
+    },
+    {
+      "features": "core",
+      "weight": 1.0,
+      "RMSE": 550.152908897666
+    },
+    {
+      "features": "compact",
+      "weight": 1.0,
+      "RMSE": 550.1776270178665
+    }
+  ],
+  "model": "TabPFN-v2 regressor, 4 estimators, local CUDA",
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "tabpfn": "2.2.1",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1"
+  },
+  "weights_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+  "script_sha256": "f023370a09e2d75017ba2b8b3374d8df7b00845d1b1a11feb9a92329386e0f46",
+  "note": "Selection on reused development data; not independent validation. Built with TabPFN by Prior Labs."
+}

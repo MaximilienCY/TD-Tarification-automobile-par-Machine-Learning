@@ -1,0 +1,82 @@
+{
+  "choices": [
+    {
+      "frequency": {
+        "config": {
+          "name": "cat_d2_n1200",
+          "kind": "cat",
+          "depth": 2,
+          "trees": 1200,
+          "l2": 10
+        },
+        "weight": 0.5,
+        "name": "0.5*cat_d2_n1200+0.5*incumbent"
+      },
+      "severity": {
+        "config": {
+          "name": "lgb_gamma_l4",
+          "kind": "lgb",
+          "leaves": 4,
+          "trees": 200,
+          "objective": "gamma",
+          "compact": true
+        },
+        "weight": 0.25,
+        "name": "0.25*lgb_gamma_l4+0.75*incumbent"
+      },
+      "search_RMSE": 549.9889632577824
+    },
+    {
+      "frequency": {
+        "config": {
+          "name": "cat_d2_n1200",
+          "kind": "cat",
+          "depth": 2,
+          "trees": 1200,
+          "l2": 10
+        },
+        "weight": 0.75,
+        "name": "0.75*cat_d2_n1200+0.25*incumbent"
+      },
+      "severity": {
+        "config": {
+          "name": "lgb_gamma_l8",
+          "kind": "lgb",
+          "leaves": 8,
+          "trees": 200,
+          "objective": "gamma",
+          "compact": true
+        },
+        "weight": 0.25,
+        "name": "0.25*lgb_gamma_l8+0.75*incumbent"
+      },
+      "search_RMSE": 549.994485000344
+    }
+  ],
+  "baseline_RMSE": 550.0657808597489,
+  "combinations": 1881,
+  "provenance": {
+    "data": {
+      "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+      "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+    },
+    "source": {
+      "__init__.py": "100b3e376bb5c6d141565df62567e20d231861a23f17cb8e15d587cce02ee61e",
+      "experiment.py": "0237a7515b456a562c85c8b5e7339f2d08ca5a179c75bb7c7da33f6c86522eab",
+      "models.py": "a2787421cff97fa7ca2f7fb21d863eec035c61cd6826f459bbcb476d0aad38a8",
+      "reference.py": "957cabf5be72d3285ec2043ec91156e1cf6ad18cc55672785e6fb3834fe8f668"
+    },
+    "versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "lightgbm": "4.7.0",
+      "joblib": "1.6.0"
+    },
+    "python": "3.12.14"
+  },
+  "script_sha256": "d4a50704cbe382c404f55292e6eef2fc30a785c436ec35af3cbcc68722b10385",
+  "note": "Selected OOF scores are optimistic; this is not an independent test."
+}

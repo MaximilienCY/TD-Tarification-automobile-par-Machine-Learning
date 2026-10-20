@@ -1,0 +1,139 @@
+{
+  "selected": {
+    "MSE": 293902.84696671343,
+    "RMSE": 542.1280724761571,
+    "MAE": 191.01144346285164,
+    "bias": -0.458240472730428,
+    "predicted_observed_ratio": 0.9955669596516892
+  },
+  "reference": {
+    "MSE": 293829.18449703563,
+    "RMSE": 542.0601299644123,
+    "MAE": 190.86136504512376,
+    "bias": -0.3297422501327809,
+    "predicted_observed_ratio": 0.9968100576305022
+  },
+  "gain": {
+    "gain_RMSE": -0.0679425117447181,
+    "interval_95": [
+      -0.21500735120780518,
+      0.0653531128292056
+    ],
+    "repetitions": 2000,
+    "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+  },
+  "frequency": {
+    "log_loss": 0.21398844626168298,
+    "Brier": 0.05407264677374027,
+    "AUC": 0.6525722585715795
+  },
+  "severity": {
+    "MSE": 2116317.3216845198,
+    "RMSE": 1454.7567912488053,
+    "MAE": 933.8615113544114,
+    "bias": -7.287213476005125,
+    "predicted_observed_ratio": 0.9958872135805552
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 16667,
+      "choice": {
+        "frequency": {
+          "kind": "xgb",
+          "trial": 0,
+          "calibrated": false,
+          "weight": 0.5
+        },
+        "severity": {
+          "kind": "reference",
+          "weight": 0.0
+        },
+        "selection_RMSE": 527.6399964077899,
+        "reference_RMSE": 527.751739712364
+      },
+      "selected": {
+        "MSE": 324454.2389309429,
+        "RMSE": 569.6088473074684,
+        "MAE": 192.88753857704788,
+        "bias": -4.88853884734649,
+        "predicted_observed_ratio": 0.9540937973781104
+      },
+      "reference": {
+        "MSE": 324401.68618950545,
+        "RMSE": 569.5627148870486,
+        "MAE": 192.8891461567808,
+        "bias": -4.76521441685981,
+        "predicted_observed_ratio": 0.955251884993027
+      }
+    },
+    {
+      "fold": 2,
+      "rows": 16667,
+      "choice": {
+        "frequency": {
+          "kind": "xgb",
+          "trial": 21,
+          "calibrated": false,
+          "weight": 0.5
+        },
+        "severity": {
+          "kind": "xgb",
+          "trial": 38,
+          "weight": 0.25
+        },
+        "selection_RMSE": 553.6009789952055,
+        "reference_RMSE": 553.6851105981268
+      },
+      "selected": {
+        "MSE": 268378.50742444606,
+        "RMSE": 518.0526106723584,
+        "MAE": 190.8750121983392,
+        "bias": 2.1162340078049704,
+        "predicted_observed_ratio": 1.0207257775084804
+      },
+      "reference": {
+        "MSE": 268459.74397530535,
+        "RMSE": 518.1310104358794,
+        "MAE": 191.11139115181794,
+        "bias": 2.5215504372666118,
+        "predicted_observed_ratio": 1.0246953281850932
+      }
+    },
+    {
+      "fold": 3,
+      "rows": 16666,
+      "choice": {
+        "frequency": {
+          "kind": "xgb",
+          "trial": 6,
+          "calibrated": true,
+          "weight": 0.5
+        },
+        "severity": {
+          "kind": "xgb",
+          "trial": 27,
+          "weight": 1.0
+        },
+        "selection_RMSE": 544.3082967733449,
+        "reference_RMSE": 544.5439778919208
+      },
+      "selected": {
+        "MSE": 288875.49290954054,
+        "RMSE": 537.4713879915289,
+        "MAE": 189.27167522916145,
+        "bias": 1.3976947752380404,
+        "predicted_observed_ratio": 1.0137687882278603
+      },
+      "reference": {
+        "MSE": 288625.811130138,
+        "RMSE": 537.2390632950456,
+        "MAE": 188.58342115287255,
+        "bias": 1.2545322837657982,
+        "predicted_observed_ratio": 1.0123584845892004
+      }
+    }
+  ],
+  "stable_improvement": false,
+  "caveat": "All data have been explored previously. Nested evaluation protects this search from outer label leakage but does not erase prior researcher adaptation."
+}

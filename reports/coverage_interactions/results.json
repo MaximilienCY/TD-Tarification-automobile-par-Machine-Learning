@@ -1,0 +1,105 @@
+{
+  "selected": {
+    "MSE": 293749.681277168,
+    "RMSE": 541.9867906851309,
+    "MAE": 190.44216141243197,
+    "bias": -0.641294265364098,
+    "predicted_observed_ratio": 0.9937960884673498
+  },
+  "incumbent": {
+    "MSE": 293732.59861827455,
+    "RMSE": 541.9710311615138,
+    "MAE": 190.73231784795638,
+    "bias": -0.3664328533347433,
+    "predicted_observed_ratio": 0.9964551109724102
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "choice": {
+        "candidate": 7,
+        "weight": 0.25,
+        "selection_RMSE": 527.7512992081865,
+        "incumbent_RMSE": 527.7564559031163
+      },
+      "selected": {
+        "MSE": 324317.5904151572,
+        "RMSE": 569.4888852428616,
+        "MAE": 192.96306157074406,
+        "bias": -4.600744381652646,
+        "predicted_observed_ratio": 0.9567963535954497
+      },
+      "incumbent": {
+        "MSE": 324307.19299520645,
+        "RMSE": 569.4797564402148,
+        "MAE": 192.9481387280579,
+        "bias": -4.620264974492851,
+        "predicted_observed_ratio": 0.9566130439566793
+      }
+    },
+    {
+      "fold": 2,
+      "choice": {
+        "candidate": 9,
+        "weight": 0.25,
+        "selection_RMSE": 553.6365773328718,
+        "incumbent_RMSE": 553.639520274331
+      },
+      "selected": {
+        "MSE": 268347.09209744394,
+        "RMSE": 518.022289189803,
+        "MAE": 190.63787280792687,
+        "bias": 2.1799351506497953,
+        "predicted_observed_ratio": 1.021349647888017
+      },
+      "incumbent": {
+        "MSE": 268364.0640068791,
+        "RMSE": 518.0386703778775,
+        "MAE": 191.00586515143374,
+        "bias": 2.532467360124954,
+        "predicted_observed_ratio": 1.024802245337641
+      }
+    },
+    {
+      "fold": 3,
+      "choice": {
+        "candidate": 1,
+        "weight": 0.5,
+        "selection_RMSE": 544.2803244175078,
+        "incumbent_RMSE": 544.3730672652504
+      },
+      "selected": {
+        "MSE": 288584.05138730805,
+        "RMSE": 537.2001967491337,
+        "MAE": 187.7253868554116,
+        "bias": 0.4969947308844126,
+        "predicted_observed_ratio": 1.0048959295843003
+      },
+      "incumbent": {
+        "MSE": 288526.2264766571,
+        "RMSE": 537.1463734185097,
+        "MAE": 188.2428002963117,
+        "bias": 0.9885803535300961,
+        "predicted_observed_ratio": 1.0097385736679607
+      }
+    }
+  ],
+  "gain": {
+    "gain_RMSE": -0.01575952361713462,
+    "interval_95": [
+      -0.09526546100031226,
+      0.06020796005191178
+    ],
+    "repetitions": 2000,
+    "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+  },
+  "note": "Previously explored clients; nested validation is diagnostic. Benchmark is the fixed 1365.745 recipe refitted per fold.",
+  "final_choice": {
+    "candidate": 3,
+    "weight": 0.25,
+    "selection_RMSE": 541.9272512447947,
+    "incumbent_RMSE": 541.9278839363125
+  },
+  "export": null,
+  "recommendation": "retain 1365.745 recipe; no supported successor"
+}

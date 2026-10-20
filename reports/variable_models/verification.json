@@ -1,0 +1,39 @@
+{
+  "status": "verified",
+  "rows": 50000,
+  "tests_passed": 46,
+  "fresh_process_byte_identical": true,
+  "frequency_unchanged": true,
+  "original_notebook_sha256": "76248bdb51400fe399c670a9b71092cabe041cc13d3839b83846ac1499938429",
+  "candidate_sha256": "70a369b8201fd6044b0938cdfb21e1bd2ac501d9fe85ad6972cb584f18481aeb",
+  "model_sha256": "9dc910e39b3a791092a3cadf93a5af886a78889949b195539e8e094782b8e555",
+  "script_sha256": "3f7c54dbb3ca6c12628cd5992a645dc45e3b307639d6384900fee75ba6797abc",
+  "configuration": {
+    "kind": "ridge",
+    "panel": "all",
+    "alpha": 10.0
+  },
+  "provenance": {
+    "data": {
+      "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+      "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+    },
+    "source": {
+      "__init__.py": "100b3e376bb5c6d141565df62567e20d231861a23f17cb8e15d587cce02ee61e",
+      "experiment.py": "0237a7515b456a562c85c8b5e7339f2d08ca5a179c75bb7c7da33f6c86522eab",
+      "models.py": "a2787421cff97fa7ca2f7fb21d863eec035c61cd6826f459bbcb476d0aad38a8",
+      "reference.py": "957cabf5be72d3285ec2043ec91156e1cf6ad18cc55672785e6fb3834fe8f668"
+    },
+    "versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "lightgbm": "4.7.0",
+      "joblib": "1.6.0"
+    },
+    "python": "3.12.14"
+  },
+  "xgboost_version": "3.4.1"
+}

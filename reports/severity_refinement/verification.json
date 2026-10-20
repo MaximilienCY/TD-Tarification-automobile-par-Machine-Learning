@@ -1,0 +1,39 @@
+{
+  "status": "verified",
+  "tests_passed": 39,
+  "fresh_process_byte_identical": true,
+  "frequency_unchanged": true,
+  "original_notebook_sha256": "76248bdb51400fe399c670a9b71092cabe041cc13d3839b83846ac1499938429",
+  "candidate_sha256": "2874eeb918f4fd40ec773baf000a3cf743da4a036e230c0fb204a0447a57c1ee",
+  "model_sha256": "4ac144a529145cffa0eebccd1e2d4456da5688e463c0ff3a76de18bd94061b13",
+  "scripts": {
+    "refine_severity.py": "b25e8c319782fda1b2d0027fd697d73f2a580fa7d49980de7e3c3dccc93c0c03",
+    "refine_frequency.py": "6865c473b048e5c3e22126019a4b7ac9ed8148abf16c2b3ab416e95ed2e4ff9e",
+    "summarize_refinement.py": "0952c6531cf96508c9c986b46ed70c9948bb84dc9007d2796b94bef82e1fd191"
+  },
+  "data_and_core": {
+    "data": {
+      "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+      "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+    },
+    "source": {
+      "__init__.py": "100b3e376bb5c6d141565df62567e20d231861a23f17cb8e15d587cce02ee61e",
+      "experiment.py": "0237a7515b456a562c85c8b5e7339f2d08ca5a179c75bb7c7da33f6c86522eab",
+      "models.py": "a2787421cff97fa7ca2f7fb21d863eec035c61cd6826f459bbcb476d0aad38a8",
+      "reference.py": "957cabf5be72d3285ec2043ec91156e1cf6ad18cc55672785e6fb3834fe8f668"
+    },
+    "versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "lightgbm": "4.7.0",
+      "joblib": "1.6.0"
+    },
+    "python": "3.12.14"
+  },
+  "kaggle_score": 1365.913,
+  "score_source": "User supplied Kaggle Complete public score in this chat",
+  "recommendation": "new public incumbent reported by user; local gain uncertain"
+}

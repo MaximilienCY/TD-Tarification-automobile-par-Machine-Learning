@@ -1,0 +1,46 @@
+{
+  "status": "verified",
+  "tests_passed": 57,
+  "original_notebook_sha256": "76248bdb51400fe399c670a9b71092cabe041cc13d3839b83846ac1499938429",
+  "incumbent_csv_unchanged": true,
+  "best_user_reported_public_score": 1365.657,
+  "source_hashes": {
+    "refine_smooth_severity.py": "c0279d0ba901856abbb6efa9ae9bfd21175e7e7b152764b6d6e211cc29266892",
+    "coverage_interactions.py": "827d50b1531d886c6ec94c69c8abbf5629d56c18a8794eb5c473afd83afcd06c",
+    "frequency_curves.py": "379ad2938df47369477d44018ced32b4f1641f71f2a3b77efbf6e4afd56bd7c1"
+  },
+  "provenance": {
+    "data": {
+      "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+      "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+    },
+    "source": {
+      "__init__.py": "100b3e376bb5c6d141565df62567e20d231861a23f17cb8e15d587cce02ee61e",
+      "experiment.py": "0237a7515b456a562c85c8b5e7339f2d08ca5a179c75bb7c7da33f6c86522eab",
+      "models.py": "a2787421cff97fa7ca2f7fb21d863eec035c61cd6826f459bbcb476d0aad38a8",
+      "reference.py": "957cabf5be72d3285ec2043ec91156e1cf6ad18cc55672785e6fb3834fe8f668"
+    },
+    "versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "lightgbm": "4.7.0",
+      "joblib": "1.6.0"
+    },
+    "python": "3.12.14"
+  },
+  "xgboost_version": "3.4.1",
+  "export": {
+    "file": "deliverables\\candidates\\submission_frequency_curves.csv",
+    "sha256": "463eed0812b6e6de59dbe1f2218c234c134f4d198205deffa8a19299470b9803",
+    "model_sha256": "cdbda24f51861834bc97a8666ca315debbf9e49aba5e5689c37295960ebffa07",
+    "kaggle_score": 1365.657
+  },
+  "fresh_process_byte_identical": true,
+  "rows": 50000,
+  "incumbent_exact": true,
+  "severity_unchanged": true,
+  "frequency_unchanged": false
+}

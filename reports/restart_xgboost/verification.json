@@ -1,0 +1,33 @@
+{
+  "status": "verified",
+  "rows": 50000,
+  "all_60_trials_in_all_four_searches": true,
+  "tests_passed": 30,
+  "test_log_sha256": "91a8a318817d740400b8acb87de8b9bfa482d3b8a92bbe9b23546dc0e2462204",
+  "fresh_process_byte_identical": true,
+  "notebook_executed_without_errors": true,
+  "protected_notebook_sha256": "76248bdb51400fe399c670a9b71092cabe041cc13d3839b83846ac1499938429",
+  "hashes": {
+    "deliverables\\candidates\\submission_restart_xgboost.csv": "a7a7069658a3954983b3c4bc2a943dc71e76f9a632dd8855cc8ad7c7bc817941",
+    "models\\restart_xgboost.joblib": "e5332bdf49bc0bb38e30f0577aa14d0ac4329cc65e08c2e16341fce240c87c75",
+    "notebooks\\04_reprise_xgboost.ipynb": "bb8d4283f2a1f7c551861797021f69c80fb631dedb866656792b5f39ea2682bf",
+    "scripts\\restart_xgboost.py": "e9b16e29b5d2cf04304f5ecea18d7502f276e757947d2affb2c10369d65238c4",
+    "scripts\\run_restart_parallel.py": "9f0442645f642cc79f2f5c314fd3e2e346156f1b4a838ce8973443e3a5cc46b1",
+    "scripts\\restart_cache.py": "e53a9761db49296302f513caa7c07823c8390b65b2f611bfef86d988d2cca14c",
+    "scripts\\build_restart_notebook.py": "a25540365fddfce3c0d2c7dc8016eaf2c1a9c16931013e4ea3e403bb57ceae02",
+    "scripts\\verify_restart.py": "8a69f27f48d2c02521aeba848f5e715968540efacf81bca3356653de72107e65"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  },
+  "target_reached": false,
+  "kaggle_score": 1366.025,
+  "note": "User supplied Kaggle Complete result in this chat"
+}

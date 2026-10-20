@@ -1,0 +1,31 @@
+{
+  "protected_notebook_sha256": "76248bdb51400fe399c670a9b71092cabe041cc13d3839b83846ac1499938429",
+  "candidate_checks": [
+    {
+      "file": "deliverables\\candidates\\submission_advanced_1.csv",
+      "sha256": "1c6f589dd2b1d985259a70b0049ecbae6ec9a004283673b6c5260637234ca5d4",
+      "rows": 50000
+    },
+    {
+      "file": "deliverables\\candidates\\submission_advanced_2.csv",
+      "sha256": "9dcb22b99119aa252f3f4d16017ce22beda3534697b5d8077103b88180dc9234",
+      "rows": 50000
+    },
+    {
+      "file": "deliverables\\candidates\\submission_modern_1.csv",
+      "sha256": "049c2c5a0141f41524a13ec9fc3e7e0c4a5eb7b8cb41427b918e061a3384a8c8",
+      "rows": 50000
+    },
+    {
+      "file": "deliverables\\candidates\\submission_modern_2.csv",
+      "sha256": "0e08e07088c59a9908716858ee09b1e7b5c50d68d59d7b306ee3630b6a373bec",
+      "rows": 50000
+    }
+  ],
+  "modern_fresh_process_prediction_identical": true,
+  "tests_passed": 14,
+  "foundation_completed": true,
+  "foundation_selected": false,
+  "foundation_best_RMSE": 550.0699755981921,
+  "original_submission_preserved": true
+}

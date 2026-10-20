@@ -1,0 +1,49 @@
+{
+  "scores": [
+    {
+      "candidate": 0,
+      "MSE": 302703.5509266559,
+      "RMSE": 550.1850151782179,
+      "MAE": 191.4380039177905,
+      "bias": -0.4228352379437094,
+      "predicted_observed_ratio": 0.9959251063259921
+    },
+    {
+      "candidate": 1,
+      "MSE": 302635.35622334667,
+      "RMSE": 550.1230373501428,
+      "MAE": 190.69473518650915,
+      "bias": -1.1905835379227152,
+      "predicted_observed_ratio": 0.9885262606053068
+    },
+    {
+      "candidate": 2,
+      "MSE": 302617.2987326329,
+      "RMSE": 550.1066248761533,
+      "MAE": 191.0931257926359,
+      "bias": -0.7779417792670386,
+      "predicted_observed_ratio": 0.9925029189844776
+    }
+  ],
+  "gains": {
+    "1": {
+      "gain_RMSE": 0.06197782807510066,
+      "interval_95": [
+        -0.08315407912116939,
+        0.20640595446654675
+      ],
+      "repetitions": 2000,
+      "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+    },
+    "2": {
+      "gain_RMSE": 0.07839030206457664,
+      "interval_95": [
+        -0.053823195708221756,
+        0.20801714853316183
+      ],
+      "repetitions": 2000,
+      "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+    }
+  },
+  "note": "Different folds of reused development data; sensitivity check, not independent validation."
+}

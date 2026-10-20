@@ -1,0 +1,143 @@
+{
+  "choice": {
+    "candidate": 5,
+    "weight": 0.75,
+    "selection_RMSE": 544.2515415783982,
+    "incumbent_RMSE": 544.3730672652504
+  },
+  "catalogue": [
+    {
+      "kind": "ridge",
+      "alpha": 1.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 3.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 30.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 100.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 3,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 5,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 6,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 4,
+      "rare": 5,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 4,
+      "rare": 30,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 4,
+      "rare": 50,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 0.5
+    },
+    {
+      "kind": "ridge",
+      "alpha": 10.0,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 2.0
+    },
+    {
+      "kind": "gamma",
+      "alpha": 0.001,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "gamma",
+      "alpha": 0.01,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "gamma",
+      "alpha": 0.1,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "poisson",
+      "alpha": 0.001,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "poisson",
+      "alpha": 0.01,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    },
+    {
+      "kind": "poisson",
+      "alpha": 0.1,
+      "knots": 4,
+      "rare": 15,
+      "category_scale": 1.0
+    }
+  ]
+}

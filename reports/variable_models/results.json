@@ -1,0 +1,110 @@
+{
+  "selected": {
+    "MSE": 293702.11027649924,
+    "RMSE": 541.9429031517059,
+    "MAE": 190.6605117377867,
+    "bias": -0.44484267089629737,
+    "predicted_observed_ratio": 0.9956965706302993
+  },
+  "incumbent": {
+    "MSE": 293797.30727158714,
+    "RMSE": 542.0307253944071,
+    "MAE": 191.03570202027157,
+    "bias": -0.09433677808463749,
+    "predicted_observed_ratio": 0.999087381476614
+  },
+  "gain": {
+    "gain_RMSE": 0.08782224270123606,
+    "interval_95": [
+      -0.02903266884801212,
+      0.2086924317671446
+    ],
+    "repetitions": 2000,
+    "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "choice": {
+        "candidate": 13,
+        "weight": 0.5,
+        "selection_RMSE": 527.7444810721959,
+        "incumbent_RMSE": 527.7653951678471
+      },
+      "selected": {
+        "MSE": 324331.0287430549,
+        "RMSE": 569.500683707276,
+        "MAE": 193.02878416337956,
+        "bias": -4.555656290684936,
+        "predicted_observed_ratio": 0.9572197568053721
+      },
+      "incumbent": {
+        "MSE": 324352.6552931914,
+        "RMSE": 569.5196706815238,
+        "MAE": 193.02493544437175,
+        "bias": -4.589473617127487,
+        "predicted_observed_ratio": 0.9569021925825483
+      }
+    },
+    {
+      "fold": 2,
+      "choice": {
+        "candidate": 18,
+        "weight": 1.0,
+        "selection_RMSE": 553.6187696034528,
+        "incumbent_RMSE": 553.6818012215037
+      },
+      "selected": {
+        "MSE": 268222.6032666433,
+        "RMSE": 517.9021174571922,
+        "MAE": 191.11549804600685,
+        "bias": 2.6226410966250344,
+        "predicted_observed_ratio": 1.0256853805641406
+      },
+      "incumbent": {
+        "MSE": 268452.02644519106,
+        "RMSE": 518.123562912546,
+        "MAE": 191.43351039725584,
+        "bias": 2.9279407345742032,
+        "predicted_observed_ratio": 1.0286753960096051
+      }
+    },
+    {
+      "fold": 3,
+      "choice": {
+        "candidate": 12,
+        "weight": 0.5,
+        "selection_RMSE": 544.2958284558298,
+        "incumbent_RMSE": 544.5305541521549
+      },
+      "selected": {
+        "MSE": 288552.38984275307,
+        "RMSE": 537.1707269041688,
+        "MAE": 187.83708360167344,
+        "bias": 0.5985497836662328,
+        "predicted_observed_ratio": 1.0058963554569549
+      },
+      "incumbent": {
+        "MSE": 288586.92745984264,
+        "RMSE": 537.2028736518846,
+        "MAE": 188.64851699094996,
+        "bias": 1.3786109233939563,
+        "predicted_observed_ratio": 1.0135807918789663
+      }
+    }
+  ],
+  "note": "Feature families informed by previously explored residuals. Nested fitting does not undo that exposure; diagnostic only.",
+  "final_choice": {
+    "candidate": 12,
+    "weight": 0.25,
+    "selection_RMSE": 541.9278839363125,
+    "incumbent_RMSE": 541.9644365112739
+  },
+  "export": {
+    "file": "deliverables\\candidates\\submission_variable_models.csv",
+    "sha256": "70a369b8201fd6044b0938cdfb21e1bd2ac501d9fe85ad6972cb584f18481aeb",
+    "model_sha256": "9dc910e39b3a791092a3cadf93a5af886a78889949b195539e8e094782b8e555",
+    "kaggle_score": 1365.745
+  },
+  "recommendation": "new user-reported public incumbent"
+}

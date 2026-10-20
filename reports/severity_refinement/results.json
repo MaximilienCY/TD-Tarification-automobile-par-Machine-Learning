@@ -1,0 +1,135 @@
+{
+  "selected": {
+    "MSE": 293824.4034825481,
+    "RMSE": 542.0557199057566,
+    "MAE": 191.21533653411552,
+    "bias": 0.07930791570491798,
+    "predicted_observed_ratio": 1.0007672285866969
+  },
+  "reference": {
+    "MSE": 293829.18449703563,
+    "RMSE": 542.0601299644123,
+    "MAE": 190.86136504512376,
+    "bias": -0.3297422501327809,
+    "predicted_observed_ratio": 0.9968100576305022
+  },
+  "gain": {
+    "gain_RMSE": 0.004410058655707871,
+    "interval_95": [
+      -0.030733469116549374,
+      0.03948141999818515
+    ],
+    "repetitions": 2000,
+    "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "choice": {
+        "candidate": 27,
+        "weight": 0.25,
+        "config": {
+          "kind": "xgb_ratio",
+          "panel": "basic",
+          "depth": 3,
+          "trees": 80
+        },
+        "selection_RMSE": 527.748727237695,
+        "reference_RMSE": 527.751739712364
+      },
+      "selected": {
+        "MSE": 324378.85023176734,
+        "RMSE": 569.5426676130309,
+        "MAE": 192.9593883604184,
+        "bias": -4.683190389499809,
+        "predicted_observed_ratio": 0.9560221379740166
+      },
+      "reference": {
+        "MSE": 324401.68618950545,
+        "RMSE": 569.5627148870486,
+        "MAE": 192.8891461567808,
+        "bias": -4.76521441685981,
+        "predicted_observed_ratio": 0.955251884993027
+      }
+    },
+    {
+      "fold": 2,
+      "choice": {
+        "candidate": 24,
+        "weight": 1.0,
+        "config": {
+          "kind": "xgb_ratio",
+          "panel": "basic",
+          "depth": 1,
+          "trees": 240
+        },
+        "selection_RMSE": 553.6585622144728,
+        "reference_RMSE": 553.6851105981268
+      },
+      "selected": {
+        "MSE": 268458.5092723476,
+        "RMSE": 518.1298189376362,
+        "MAE": 192.04154288571058,
+        "bias": 3.60551760583521,
+        "predicted_observed_ratio": 1.0353113858986507
+      },
+      "reference": {
+        "MSE": 268459.74397530535,
+        "RMSE": 518.1310104358794,
+        "MAE": 191.11139115181794,
+        "bias": 2.5215504372666118,
+        "predicted_observed_ratio": 1.0246953281850932
+      }
+    },
+    {
+      "fold": 3,
+      "choice": {
+        "candidate": 18,
+        "weight": 1.0,
+        "config": {
+          "kind": "poisson",
+          "shift": 600.0,
+          "weighted": false,
+          "spline": true,
+          "alpha": 0.1
+        },
+        "selection_RMSE": 544.5123390364784,
+        "reference_RMSE": 544.5439778919208
+      },
+      "selected": {
+        "MSE": 288635.539617924,
+        "RMSE": 537.2481173702929,
+        "MAE": 188.6449241345581,
+        "bias": 1.3156707110634709,
+        "predicted_observed_ratio": 1.0129607634793845
+      },
+      "reference": {
+        "MSE": 288625.811130138,
+        "RMSE": 537.2390632950456,
+        "MAE": 188.58342115287255,
+        "bias": 1.2545322837657982,
+        "predicted_observed_ratio": 1.0123584845892004
+      }
+    }
+  ],
+  "note": "Frequency is unchanged. Covariates/targets have been explored previously; intervals are descriptive.",
+  "final_choice": {
+    "candidate": 26,
+    "weight": 0.5,
+    "config": {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 2,
+      "trees": 240
+    },
+    "selection_RMSE": 541.9644365112739,
+    "reference_RMSE": 541.981085620689
+  },
+  "export": {
+    "file": "deliverables\\candidates\\submission_severity_refinement.csv",
+    "sha256": "2874eeb918f4fd40ec773baf000a3cf743da4a036e230c0fb204a0447a57c1ee",
+    "kaggle_score": 1365.913
+  },
+  "recommendation": "new public incumbent reported by user; local gain remains uncertain",
+  "score_source": "User supplied Kaggle Complete public score in this chat"
+}

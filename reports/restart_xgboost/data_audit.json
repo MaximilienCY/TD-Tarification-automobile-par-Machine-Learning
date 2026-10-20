@@ -1,0 +1,14 @@
+{
+  "train_rows": 50000,
+  "test_rows": 50000,
+  "clients": 45785,
+  "claims": 2917,
+  "anomalies": {
+    "zero_weight": 1883,
+    "zero_engine": 3,
+    "licence_exceeds_age1": 12,
+    "licence_exceeds_age2": 397,
+    "largest_25_share_squared_cost": 0.21505416650805687
+  },
+  "note": "Associations are descriptive, not causal. Duration/exposure and sale-date semantics unconfirmed."
+}

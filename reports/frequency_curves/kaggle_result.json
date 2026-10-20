@@ -1,0 +1,12 @@
+{
+  "file": "deliverables\\candidates\\submission_frequency_curves.csv",
+  "sha256": "463eed0812b6e6de59dbe1f2218c234c134f4d198205deffa8a19299470b9803",
+  "public_score": 1365.657,
+  "source": "User supplied Kaggle Complete public score in this chat",
+  "independently_browser_verified": false,
+  "local_date": "2026-10-12",
+  "previous_best_public_score": 1365.745,
+  "improvement": 0.088,
+  "target": 1365.5,
+  "target_reached": false
+}

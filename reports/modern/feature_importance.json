@@ -1,0 +1,119 @@
+{
+  "frequency_ebm": [
+    {
+      "feature": "type_contrat",
+      "importance": 0.28216719464190304
+    },
+    {
+      "feature": "anciennete_vehicule",
+      "importance": 0.23734330756047595
+    },
+    {
+      "feature": "conducteur2",
+      "importance": 0.21419785960790083
+    },
+    {
+      "feature": "anciennete_permis2",
+      "importance": 0.21203910594613568
+    },
+    {
+      "feature": "departement",
+      "importance": 0.19013041809918688
+    },
+    {
+      "feature": "modele_vehicule",
+      "importance": 0.17290436762019423
+    },
+    {
+      "feature": "age_conducteur1",
+      "importance": 0.14896060081282803
+    },
+    {
+      "feature": "marque_vehicule",
+      "importance": 0.14098982429038162
+    },
+    {
+      "feature": "log_din",
+      "importance": 0.11030801708956993
+    },
+    {
+      "feature": "log_poids",
+      "importance": 0.08911283917115292
+    },
+    {
+      "feature": "log_bonus",
+      "importance": 0.07319419704432863
+    },
+    {
+      "feature": "essence_vehicule",
+      "importance": 0.05247048696759964
+    },
+    {
+      "feature": "freq_paiement",
+      "importance": 0.04756265269341089
+    },
+    {
+      "feature": "duree_contrat",
+      "importance": 0.04717339874955409
+    },
+    {
+      "feature": "utilisation",
+      "importance": 0.04161524456656014
+    },
+    {
+      "feature": "anciennete_info",
+      "importance": 0.031840977278988755
+    },
+    {
+      "feature": "log_cylindre",
+      "importance": 0.024050911664502524
+    },
+    {
+      "feature": "type_vehicule",
+      "importance": 0.01730662989933968
+    },
+    {
+      "feature": "paiement",
+      "importance": 0.012388436755055085
+    }
+  ],
+  "severity_xgboost": [
+    {
+      "feature": "departement",
+      "importance": 0.22699996829032898
+    },
+    {
+      "feature": "type_contrat",
+      "importance": 0.19769816100597382
+    },
+    {
+      "feature": "anciennete_vehicule",
+      "importance": 0.13743162155151367
+    },
+    {
+      "feature": "age_conducteur1",
+      "importance": 0.0845331996679306
+    },
+    {
+      "feature": "utilisation",
+      "importance": 0.0816383808851242
+    },
+    {
+      "feature": "log_prix",
+      "importance": 0.07924153655767441
+    },
+    {
+      "feature": "bonus",
+      "importance": 0.07291408628225327
+    },
+    {
+      "feature": "log_din",
+      "importance": 0.06311102211475372
+    },
+    {
+      "feature": "conducteur2",
+      "importance": 0.05643204599618912
+    }
+  ],
+  "note": "Predictive importance inside each added component, not a causal effect or the full blended model."
+}

@@ -1,0 +1,241 @@
+{
+  "candidate": 24,
+  "weight": 1.0,
+  "config": {
+    "kind": "xgb_ratio",
+    "panel": "basic",
+    "depth": 1,
+    "trees": 240
+  },
+  "selection_RMSE": 553.6585622144728,
+  "reference_RMSE": 553.6851105981268,
+  "catalogue": [
+    {
+      "kind": "gamma",
+      "shift": 0.0,
+      "weighted": false,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 0.0,
+      "weighted": false,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 0.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 0.0,
+      "weighted": true,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 300.0,
+      "weighted": false,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 300.0,
+      "weighted": false,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 300.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 300.0,
+      "weighted": true,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 600.0,
+      "weighted": false,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 600.0,
+      "weighted": false,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 600.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 600.0,
+      "weighted": true,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 0.0,
+      "weighted": false,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 0.0,
+      "weighted": false,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 0.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 0.0,
+      "weighted": true,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 600.0,
+      "weighted": false,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 600.0,
+      "weighted": false,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 600.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 0.1
+    },
+    {
+      "kind": "poisson",
+      "shift": 600.0,
+      "weighted": true,
+      "spline": true,
+      "alpha": 0.1
+    },
+    {
+      "kind": "gamma",
+      "shift": 0.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 0.01
+    },
+    {
+      "kind": "gamma",
+      "shift": 0.0,
+      "weighted": true,
+      "spline": false,
+      "alpha": 1.0
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 1,
+      "trees": 80
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 1,
+      "trees": 240
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 2,
+      "trees": 80
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 2,
+      "trees": 240
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 3,
+      "trees": 80
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "basic",
+      "depth": 3,
+      "trees": 240
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "compact",
+      "depth": 1,
+      "trees": 80
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "compact",
+      "depth": 1,
+      "trees": 240
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "compact",
+      "depth": 2,
+      "trees": 80
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "compact",
+      "depth": 2,
+      "trees": 240
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "compact",
+      "depth": 3,
+      "trees": 80
+    },
+    {
+      "kind": "xgb_ratio",
+      "panel": "compact",
+      "depth": 3,
+      "trees": 240
+    }
+  ],
+  "caveat": "Inner selection is optimistic. Prior data/leaderboard exposure cannot be undone by nested evaluation."
+}

@@ -1,0 +1,12 @@
+{
+  "file": "deliverables\\candidates\\submission_variable_models.csv",
+  "sha256": "70a369b8201fd6044b0938cdfb21e1bd2ac501d9fe85ad6972cb584f18481aeb",
+  "public_score": 1365.745,
+  "source": "User supplied Kaggle Complete public score",
+  "independently_browser_verified": false,
+  "local_date": "2026-10-12",
+  "previous_best_public_score": 1365.913,
+  "improvement": 0.168,
+  "target": 1365.5,
+  "target_reached": false
+}

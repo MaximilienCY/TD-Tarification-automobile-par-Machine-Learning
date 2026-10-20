@@ -1,0 +1,70 @@
+{
+  "choice": {
+    "candidate": 7,
+    "weight": 0.25,
+    "selection_RMSE": 527.7512992081865,
+    "incumbent_RMSE": 527.7564559031163
+  },
+  "catalogue": [
+    {
+      "block": "vehicle_coverage",
+      "alpha": 10.0,
+      "scale": 0.5
+    },
+    {
+      "block": "vehicle_coverage",
+      "alpha": 10.0,
+      "scale": 1.0
+    },
+    {
+      "block": "vehicle_coverage",
+      "alpha": 100.0,
+      "scale": 0.5
+    },
+    {
+      "block": "vehicle_coverage",
+      "alpha": 100.0,
+      "scale": 1.0
+    },
+    {
+      "block": "driver_usage",
+      "alpha": 10.0,
+      "scale": 0.5
+    },
+    {
+      "block": "driver_usage",
+      "alpha": 10.0,
+      "scale": 1.0
+    },
+    {
+      "block": "driver_usage",
+      "alpha": 100.0,
+      "scale": 0.5
+    },
+    {
+      "block": "driver_usage",
+      "alpha": 100.0,
+      "scale": 1.0
+    },
+    {
+      "block": "both",
+      "alpha": 10.0,
+      "scale": 0.5
+    },
+    {
+      "block": "both",
+      "alpha": 10.0,
+      "scale": 1.0
+    },
+    {
+      "block": "both",
+      "alpha": 100.0,
+      "scale": 0.5
+    },
+    {
+      "block": "both",
+      "alpha": 100.0,
+      "scale": 1.0
+    }
+  ]
+}

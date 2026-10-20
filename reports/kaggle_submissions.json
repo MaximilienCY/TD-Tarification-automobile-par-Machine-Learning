@@ -1,0 +1,118 @@
+{
+  "competition": "cy-tech-2027-calcul-de-la-prime-dassurance",
+  "public_fraction": 0.33,
+  "submissions": [
+    {
+      "label": "Reference logistique / Gamma (v3)",
+      "public_score": 1365.943,
+      "status": "verified_existing",
+      "sha256": "78515c47fdc519634175ff36b1a82e41a325713d0e3aea4090d356ff53d6df8c"
+    },
+    {
+      "label": "Optimisation precedente (v4)",
+      "public_score": 1366.006,
+      "status": "verified_existing"
+    },
+    {
+      "label": "Nouveau modele CatBoost / Gamma (v5)",
+      "public_score": null,
+      "status": "upload_blocked",
+      "sha256": "d6ed7f0fa76009a476aeea5293252ef980008f4b8ef168d5de7f341b2c1ef27d"
+    },
+    {
+      "label": "advanced candidate 1",
+      "file": "deliverables\\candidates\\submission_advanced_1.csv",
+      "public_score": null,
+      "status": "permission_blocked",
+      "sha256": "1c6f589dd2b1d985259a70b0049ecbae6ec9a004283673b6c5260637234ca5d4"
+    },
+    {
+      "label": "advanced candidate 2",
+      "file": "deliverables\\candidates\\submission_advanced_2.csv",
+      "public_score": null,
+      "status": "permission_blocked",
+      "sha256": "9dcb22b99119aa252f3f4d16017ce22beda3534697b5d8077103b88180dc9234"
+    },
+    {
+      "label": "modern candidate 1",
+      "file": "deliverables\\candidates\\submission_modern_1.csv",
+      "public_score": null,
+      "status": "permission_blocked",
+      "sha256": "049c2c5a0141f41524a13ec9fc3e7e0c4a5eb7b8cb41427b918e061a3384a8c8"
+    },
+    {
+      "label": "modern candidate 2",
+      "file": "deliverables\\candidates\\submission_modern_2.csv",
+      "public_score": null,
+      "status": "permission_blocked",
+      "sha256": "0e08e07088c59a9908716858ee09b1e7b5c50d68d59d7b306ee3630b6a373bec"
+    },
+    {
+      "label": "Original logistic with regularized frequency correction; original Gamma unchanged",
+      "file": "deliverables\\candidates\\submission_anchored.csv",
+      "sha256": "81f621aaca358abdd64311bb2a9349becacf2756c95ea53dc56b08a7ca56aa70",
+      "status": "complete_user_reported",
+      "public_score": 1366.01,
+      "score_source": "User supplied Kaggle Complete result in this chat",
+      "independently_browser_verified": false
+    },
+    {
+      "label": "XGBoost restart: nested frequency x severity selection",
+      "file": "deliverables\\candidates\\submission_restart_xgboost.csv",
+      "sha256": "a7a7069658a3954983b3c4bc2a943dc71e76f9a632dd8855cc8ad7c7bc817941",
+      "status": "complete_user_reported",
+      "public_score": 1366.025,
+      "score_source": "User supplied Kaggle Complete result in this chat",
+      "independently_browser_verified": false
+    },
+    {
+      "label": "Severity-only weighted XGBoost ratio; original frequency unchanged",
+      "file": "deliverables\\candidates\\submission_severity_refinement.csv",
+      "sha256": "2874eeb918f4fd40ec773baf000a3cf743da4a036e230c0fb204a0447a57c1ee",
+      "public_score": 1365.913,
+      "status": "complete_user_reported",
+      "validation_gain_uncertain": true,
+      "score_source": "User supplied Kaggle Complete public score in this chat",
+      "independently_browser_verified": false
+    },
+    {
+      "file": "deliverables\\candidates\\submission_severity_successor.csv",
+      "sha256": "28ab50d597186e0e5c3a06cb4b354ee31feba09c3b3c1ff83179b9e16d843e89",
+      "public_score": 1365.914,
+      "status": "complete_user_reported",
+      "label": "Three-seed severity correction; original frequency unchanged",
+      "validation_gain_uncertain": true,
+      "decision": "Not an improvement over severity_refinement at 1365.913; retain previous incumbent"
+    },
+    {
+      "file": "deliverables\\candidates\\submission_variable_models.csv",
+      "sha256": "70a369b8201fd6044b0938cdfb21e1bd2ac501d9fe85ad6972cb584f18481aeb",
+      "public_score": 1365.745,
+      "source": "User supplied Kaggle Complete public score",
+      "independently_browser_verified": false,
+      "local_date": "2026-10-12",
+      "previous_best_public_score": 1365.913,
+      "improvement": 0.168,
+      "target": 1365.5,
+      "target_reached": false,
+      "label": "Expanded-variable smooth severity correction at 25 percent",
+      "status": "complete_user_reported",
+      "validation_gain_uncertain": true
+    },
+    {
+      "file": "deliverables\\candidates\\submission_frequency_curves.csv",
+      "sha256": "463eed0812b6e6de59dbe1f2218c234c134f4d198205deffa8a19299470b9803",
+      "model_sha256": "cdbda24f51861834bc97a8666ca315debbf9e49aba5e5689c37295960ebffa07",
+      "kaggle_score": 1365.657,
+      "public_score": 1365.657,
+      "status": "complete_user_reported",
+      "label": "frequency_curves",
+      "validation_gain_uncertain": false
+    }
+  ],
+  "blocker": "Saved browser permission denies access to kaggle.com. No alternate access attempted.",
+  "last_checked_local_date": "2026-10-11",
+  "target_public_score_below": 1365.5,
+  "best_user_reported_public_score": 1365.657,
+  "best_user_reported_file": "deliverables\\candidates\\submission_frequency_curves.csv"
+}

@@ -1,0 +1,93 @@
+{
+  "candidate": 13,
+  "weight": 1.0,
+  "config": {
+    "C": 1.0,
+    "power": 0,
+    "loss": "logloss"
+  },
+  "selection_RMSE": 527.722081834605,
+  "reference_RMSE": 527.751739712364,
+  "catalogue": [
+    {
+      "C": 0.03,
+      "power": 0,
+      "loss": "logloss"
+    },
+    {
+      "C": 0.03,
+      "power": 0,
+      "loss": "brier"
+    },
+    {
+      "C": 0.03,
+      "power": 2,
+      "loss": "logloss"
+    },
+    {
+      "C": 0.03,
+      "power": 2,
+      "loss": "brier"
+    },
+    {
+      "C": 0.1,
+      "power": 0,
+      "loss": "logloss"
+    },
+    {
+      "C": 0.1,
+      "power": 0,
+      "loss": "brier"
+    },
+    {
+      "C": 0.1,
+      "power": 2,
+      "loss": "logloss"
+    },
+    {
+      "C": 0.1,
+      "power": 2,
+      "loss": "brier"
+    },
+    {
+      "C": 0.3,
+      "power": 0,
+      "loss": "logloss"
+    },
+    {
+      "C": 0.3,
+      "power": 0,
+      "loss": "brier"
+    },
+    {
+      "C": 0.3,
+      "power": 2,
+      "loss": "logloss"
+    },
+    {
+      "C": 0.3,
+      "power": 2,
+      "loss": "brier"
+    },
+    {
+      "C": 1.0,
+      "power": 0,
+      "loss": "logloss"
+    },
+    {
+      "C": 1.0,
+      "power": 0,
+      "loss": "brier"
+    },
+    {
+      "C": 1.0,
+      "power": 2,
+      "loss": "logloss"
+    },
+    {
+      "C": 1.0,
+      "power": 2,
+      "loss": "brier"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "max_absolute_difference": 7.690914571867324e-10,
+  "mean_absolute_difference": 3.78060451478035e-11,
+  "prediction_RMSE_difference": 5.383185394020028e-11,
+  "original_mean": 102.4653638317227,
+  "refitted_mean": 102.46536383171075
+}

@@ -1,0 +1,72 @@
+{
+  "selected_candidate": 23,
+  "choice": {
+    "config": {
+      "depth": 3,
+      "trees": 240
+    },
+    "weight": 0.5
+  },
+  "search_RMSE": 550.2918542145063,
+  "reference_search_RMSE": 550.3415631212438,
+  "confirmation": {
+    "MSE": 302832.79013339913,
+    "RMSE": 550.3024533230787,
+    "MAE": 191.73965812559823,
+    "bias": -0.26322701859770076,
+    "predicted_observed_ratio": 0.9974632622434023
+  },
+  "reference_confirmation": {
+    "MSE": 302875.96678200347,
+    "RMSE": 550.3416818504695,
+    "MAE": 191.84341300802012,
+    "bias": -0.1699294733154266,
+    "predicted_observed_ratio": 0.9983623774139356
+  },
+  "gain": {
+    "gain_RMSE": 0.039228527390832824,
+    "interval_95": [
+      -0.04236816415330793,
+      0.11976390146294306
+    ],
+    "repetitions": 2000,
+    "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+  },
+  "provenance": {
+    "data": {
+      "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+      "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+    },
+    "source": {
+      "__init__.py": "100b3e376bb5c6d141565df62567e20d231861a23f17cb8e15d587cce02ee61e",
+      "experiment.py": "0237a7515b456a562c85c8b5e7339f2d08ca5a179c75bb7c7da33f6c86522eab",
+      "models.py": "a2787421cff97fa7ca2f7fb21d863eec035c61cd6826f459bbcb476d0aad38a8",
+      "reference.py": "957cabf5be72d3285ec2043ec91156e1cf6ad18cc55672785e6fb3834fe8f668"
+    },
+    "versions": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "lightgbm": "4.7.0",
+      "joblib": "1.6.0"
+    },
+    "python": "3.12.14"
+  },
+  "script_sha256": "db130a43b3e92254b427500d56ed609e23d0f70d86c9ccdde140bc4f96bb37d4",
+  "caveat": "Both splits reuse previously explored development rows; confirmation is a sensitivity check, not a fresh test.",
+  "historical_diagnostic": {
+    "MSE": 257612.23971302828,
+    "RMSE": 507.555159281263,
+    "MAE": 190.29959143694913,
+    "bias": 2.6022079281344586,
+    "predicted_observed_ratio": 1.0255669079355019
+  },
+  "export": {
+    "file": "deliverables\\candidates\\submission_anchored.csv",
+    "sha256": "81f621aaca358abdd64311bb2a9349becacf2756c95ea53dc56b08a7ca56aa70",
+    "kaggle_score": 1366.01
+  },
+  "score_source": "User supplied Kaggle Complete result in this chat"
+}

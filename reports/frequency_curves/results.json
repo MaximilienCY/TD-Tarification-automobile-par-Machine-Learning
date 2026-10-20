@@ -1,0 +1,120 @@
+{
+  "selected": {
+    "MSE": 293672.4859229057,
+    "RMSE": 541.9155708437484,
+    "MAE": 191.09076225608067,
+    "bias": 0.12389198183611065,
+    "predicted_observed_ratio": 1.0011985369843899
+  },
+  "incumbent": {
+    "MSE": 293732.59861827455,
+    "RMSE": 541.9710311615138,
+    "MAE": 190.73231784795638,
+    "bias": -0.3664328533347433,
+    "predicted_observed_ratio": 0.9964551109724102
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "choice": {
+        "candidate": 3,
+        "weight": 1.0,
+        "selection_RMSE": 527.7324311089228,
+        "incumbent_RMSE": 527.7564559031163
+      },
+      "selected": {
+        "MSE": 324220.35772208276,
+        "RMSE": 569.403510458166,
+        "MAE": 193.08095271838437,
+        "bias": -4.396378029411644,
+        "predicted_observed_ratio": 0.95871547165261
+      },
+      "incumbent": {
+        "MSE": 324307.19299520645,
+        "RMSE": 569.4797564402148,
+        "MAE": 192.9481387280579,
+        "bias": -4.620264974492851,
+        "predicted_observed_ratio": 0.9566130439566793
+      }
+    },
+    {
+      "fold": 2,
+      "choice": {
+        "candidate": 3,
+        "weight": 1.0,
+        "selection_RMSE": 553.5790083155395,
+        "incumbent_RMSE": 553.639520274331
+      },
+      "selected": {
+        "MSE": 268289.5818156117,
+        "RMSE": 517.966776748868,
+        "MAE": 191.47761889994132,
+        "bias": 3.1705241039184995,
+        "predicted_observed_ratio": 1.0310511866460585
+      },
+      "incumbent": {
+        "MSE": 268364.0640068791,
+        "RMSE": 518.0386703778775,
+        "MAE": 191.00586515143374,
+        "bias": 2.532467360124954,
+        "predicted_observed_ratio": 1.024802245337641
+      }
+    },
+    {
+      "fold": 3,
+      "choice": {
+        "candidate": 3,
+        "weight": 1.0,
+        "selection_RMSE": 544.2979361088784,
+        "incumbent_RMSE": 544.3730672652504
+      },
+      "selected": {
+        "MSE": 288507.2083205645,
+        "RMSE": 537.1286701718356,
+        "MAE": 188.71357252138486,
+        "bias": 1.597618292811701,
+        "predicted_observed_ratio": 1.0157382486737379
+      },
+      "incumbent": {
+        "MSE": 288526.2264766571,
+        "RMSE": 537.1463734185097,
+        "MAE": 188.2428002963117,
+        "bias": 0.9885803535300961,
+        "predicted_observed_ratio": 1.0097385736679607
+      }
+    }
+  ],
+  "gain": {
+    "gain_RMSE": 0.05546031776543714,
+    "interval_95": [
+      0.0046495906212925325,
+      0.11078638878312856
+    ],
+    "repetitions": 2000,
+    "interpretation": "Descriptive paired client bootstrap conditional on fitted predictions; not full training uncertainty."
+  },
+  "note": "Previously explored clients; nested validation is diagnostic. Severity is exactly the fixed 1365.745 recipe.",
+  "frequency": {
+    "selected": {
+      "log_loss": 0.2139301673711023,
+      "brier": 0.054071440662871346
+    },
+    "incumbent": {
+      "log_loss": 0.21404432055967237,
+      "brier": 0.054085306146468504
+    }
+  },
+  "final_choice": {
+    "candidate": 3,
+    "weight": 1.0,
+    "selection_RMSE": 541.8759551601989,
+    "incumbent_RMSE": 541.9278839363125
+  },
+  "export": {
+    "file": "deliverables\\candidates\\submission_frequency_curves.csv",
+    "sha256": "463eed0812b6e6de59dbe1f2218c234c134f4d198205deffa8a19299470b9803",
+    "model_sha256": "cdbda24f51861834bc97a8666ca315debbf9e49aba5e5689c37295960ebffa07",
+    "kaggle_score": 1365.657
+  },
+  "recommendation": "new user-reported public incumbent"
+}

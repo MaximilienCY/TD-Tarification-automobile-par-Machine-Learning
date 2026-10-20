@@ -1,0 +1,46 @@
+{
+  "choice": {
+    "candidate": 3,
+    "weight": 1.0,
+    "selection_RMSE": 544.2979361088784,
+    "incumbent_RMSE": 544.3730672652504
+  },
+  "catalogue": [
+    {
+      "panel": "vehicle",
+      "alpha": 100.0
+    },
+    {
+      "panel": "vehicle",
+      "alpha": 1000.0
+    },
+    {
+      "panel": "vehicle",
+      "alpha": 10000.0
+    },
+    {
+      "panel": "age_coverage",
+      "alpha": 100.0
+    },
+    {
+      "panel": "age_coverage",
+      "alpha": 1000.0
+    },
+    {
+      "panel": "age_coverage",
+      "alpha": 10000.0
+    },
+    {
+      "panel": "compact",
+      "alpha": 100.0
+    },
+    {
+      "panel": "compact",
+      "alpha": 1000.0
+    },
+    {
+      "panel": "compact",
+      "alpha": 10000.0
+    }
+  ]
+}
