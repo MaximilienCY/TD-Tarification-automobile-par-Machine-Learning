@@ -8,6 +8,7 @@
 Data/
   train.csv, test.csv           données Kaggle
   predictions/                  prédictions sauvegardées (fréquence, gravités)
+  resultats/                    résultats longs à calculer (sélection des variables)
 notebooks/
   01_frequence.ipynb            modèle de fréquence (régression logistique)
   02_gravite.ipynb              modèle de gravité (3 gravités retenues)
