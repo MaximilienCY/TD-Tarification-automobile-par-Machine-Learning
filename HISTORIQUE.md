@@ -38,6 +38,7 @@ La **logistique de référence** est la régression logistique de Maximilien : 1
 | Traitement marque / modèle (notebook 01, 4.5) | 13 variantes (lissage, taux hiérarchique, clé marque\|modèle, regroupement des rares…) : aucune ne bat la version actuelle ; sans marque ni modèle, jeu égal | version actuelle gardée |
 | Tests de variables (notebook 01, 4.6) | indispensables : type de contrat, âge du véhicule, bonus, âge du conducteur ; plus petit (6 ou 12 variables) = pire ; département, marque, modèle, classes, interactions = rien ; seul gain net : 3 variables métier (jeune 2e conducteur, puissance / poids, malus), −0,00031 de log-loss CV | variables métier à intégrer, puis à juger sur la RMSE de la prime |
 | Solidité de la validation croisée (notebook 01, 4.8) | 5 tirages, avec et sans stratification, 3 / 5 / 10 paquets : log-loss CV entre 0,21404 et 0,21443, gain des variables métier entre −0,00027 et −0,00036 dans tous les cas | pas de coquille ; découpage gardé (stratifié, 5 paquets, graine 42) |
+| Catégorielles en taux de sinistres au lieu du one-hot (notebook 01, 4.9) | les 7 variables en taux : +0,00024 de log-loss CV (pire), Gini 0,297 → 0,294 ; une à une : égal ou légèrement pire | one-hot gardé |
 | Mélange 75 % CatBoost + 25 % logistique (binôme) | légèrement meilleur en local, jamais noté sur Kaggle | abandonné |
 | Correction XGBoost du logit (binôme) | Kaggle 1366.010, moins bon | écarté |
 | Autres réglages de la logistique : C, pondérations, perte Brier (binôme) | pas de gain local | écarté |
