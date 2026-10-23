@@ -13,7 +13,8 @@ notebooks/
   01_frequence.ipynb            modèle de fréquence (régression logistique)
   02_gravite.ipynb              modèle de gravité (3 gravités retenues)
   03_prime_finale.ipynb         fréquence × gravité → submission.csv
-submission.csv                  soumission Kaggle (colonnes index, pred)
+submission.csv                  meilleure soumission confirmée sur Kaggle (colonnes index, pred)
+submission_candidat.csv         nouveau candidat, meilleur en local, pas encore soumis
 HISTORIQUE.md                   tout ce qui a été fait, et où le retrouver
 td_data_science.pdf             sujet du TD
 ```
