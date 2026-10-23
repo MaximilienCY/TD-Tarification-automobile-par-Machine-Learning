@@ -1,0 +1,12 @@
+{
+  "url": "https://www.insee.fr/fr/statistiques/fichier/6439600/grille_densite_7_niveaux_2021.xlsx",
+  "page": "https://www.insee.fr/fr/information/6439600",
+  "source_sha256": "25f7a337bc6221b48e3f38fa78c85de9fdab9e59e9e16f32fb7bf306fb26ca50",
+  "normalized_sha256": "c6cf5bad2a285ee0b595ec5dd6e70027228d45da20894e464165a0b73227a12e",
+  "geography_year": 2021,
+  "population_year": 2018,
+  "published_in_file": "2023-05-17",
+  "n_communes": 34965,
+  "claim_dates_unknown": true,
+  "temporal_caveat": "Date des contrats inconnue; compatibilité temporelle du référentiel non garantie."
+}

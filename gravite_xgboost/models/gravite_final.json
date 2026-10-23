@@ -1,0 +1,164 @@
+{
+  "status": "modele_final_retenu",
+  "model_family": "XGBoost Gamma unique",
+  "target": "E[montant_sinistre | montant_sinistre > 0, X]",
+  "model_path": "models/gravite_final.joblib",
+  "model_sha256": "952a5f9241a3919b6f35dd9aef9d995fa627bbbc7b9106b6fa5164643856fc4f",
+  "configuration": {
+    "spec": {
+      "blocks": [
+        "geographie"
+      ],
+      "drop": [
+        "classe_taille_commune"
+      ]
+    },
+    "params": {
+      "n_estimators": 400,
+      "max_depth": 1,
+      "learning_rate": 0.03,
+      "min_child_weight": 40,
+      "reg_lambda": 20,
+      "reg_alpha": 0,
+      "subsample": 0.9,
+      "colsample_bytree": 1.0
+    },
+    "objective": "reg:gamma"
+  },
+  "features": [
+    "type_contrat",
+    "prix_vehicule",
+    "anciennete_vehicule",
+    "classe_geographique"
+  ],
+  "qualitative_features": [
+    "type_contrat",
+    "classe_geographique"
+  ],
+  "encoded_features": [
+    "num__prix_vehicule",
+    "num__anciennete_vehicule",
+    "cat__type_contrat_Maxi",
+    "cat__type_contrat_Median1",
+    "cat__type_contrat_Median2",
+    "cat__type_contrat_Mini",
+    "cat__classe_geographique_inconnu",
+    "cat__classe_geographique_rural",
+    "cat__classe_geographique_urbain_dense",
+    "cat__classe_geographique_urbain_intermediaire"
+  ],
+  "raw_input_columns": [
+    "bonus",
+    "type_contrat",
+    "duree_contrat",
+    "anciennete_info",
+    "freq_paiement",
+    "paiement",
+    "utilisation",
+    "code_postal",
+    "conducteur2",
+    "age_conducteur1",
+    "age_conducteur2",
+    "anciennete_permis1",
+    "anciennete_permis2",
+    "anciennete_vehicule",
+    "cylindre_vehicule",
+    "din_vehicule",
+    "essence_vehicule",
+    "marque_vehicule",
+    "modele_vehicule",
+    "debut_vente_vehicule",
+    "fin_vente_vehicule",
+    "vitesse_vehicule",
+    "type_vehicule",
+    "prix_vehicule",
+    "poids_vehicule"
+  ],
+  "split": {
+    "method": "GroupShuffleSplit sur le portefeuille complet",
+    "random_state": 2026,
+    "test_size_clients": 0.2,
+    "training_portfolio_rows": 39964,
+    "validation_portfolio_rows": 10036,
+    "training_positive_rows": 2356,
+    "validation_positive_rows": 561,
+    "training_positive_clients": 2338,
+    "validation_positive_clients": 558,
+    "client_overlap": false,
+    "source": "reports/final/decoupage_clients_80_20.csv",
+    "sha256": "ebb1589caac0c984d2e4750ce2062192c17e5b19d1289b579c47fa3191499c0f"
+  },
+  "fitted_on_training_80_only": true,
+  "validation_rows_used_for_fit": false,
+  "metrics": {
+    "training_80": {
+      "rmse": 1438.5623002201235,
+      "mae": 918.9289173731131,
+      "gamma_deviance": 0.38651813886208963,
+      "r2": 0.03090769696118878,
+      "ratio_predit_observe": 0.9965127666757929,
+      "moyenne_predite": 1761.1421177707018
+    },
+    "validation_20": {
+      "rmse": 1463.8060371386764,
+      "mae": 930.4937538818795,
+      "gamma_deviance": 0.3964895237128178,
+      "r2": 0.013126410563495838,
+      "ratio_predit_observe": 0.9842064058946486,
+      "moyenne_predite": 1762.6177610781529
+    },
+    "development_cv_3_folds": {
+      "rmse": 1448.339903817933,
+      "mae": 924.335185038076,
+      "gamma_deviance": 0.3958438676786495,
+      "r2": 0.0176894977449121,
+      "ratio_predit_observe": 0.9952644321949,
+      "moyenne_predite": 1758.9359298472898
+    }
+  },
+  "data_sha256": {
+    "train.csv": "8b5ca8a59c214269056ed1720de33619c10968549c383ec350898a659b97bfc5",
+    "test.csv": "68cdf87201974688d754d846c2d8ff33c5aa2f9c011e84fba92018186cd8f569"
+  },
+  "source_sha256": {
+    "gravite_pipeline.py": "189a34b43c7ae3c6019f06ef143ef65748af175e5c4b0f609d996b11525ad5af",
+    "metier_features.py": "9d96a55d99a4b305e6d9f7beb8ce9378f26c3f5f786063ea63173cc3b33886f3",
+    "qualitative_features.py": "7b0c60de3429983d59d4d595ccc503f3033f3eeaf847df3150ee905b432b9b11",
+    "predict_final.py": "ca800a6d573cc9e8efd667f12f34572eab339cf5506e79b551c9ca946fd19496"
+  },
+  "geography_reference": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/6439600/grille_densite_7_niveaux_2021.xlsx",
+    "page": "https://www.insee.fr/fr/information/6439600",
+    "source_sha256": "25f7a337bc6221b48e3f38fa78c85de9fdab9e59e9e16f32fb7bf306fb26ca50",
+    "normalized_sha256": "c6cf5bad2a285ee0b595ec5dd6e70027228d45da20894e464165a0b73227a12e",
+    "geography_year": 2021,
+    "population_year": 2018,
+    "published_in_file": "2023-05-17",
+    "n_communes": 34965,
+    "claim_dates_unknown": true,
+    "temporal_caveat": "Date des contrats inconnue; compatibilité temporelle du référentiel non garantie."
+  },
+  "code_postal_interpreted_as_insee_commune_code": true,
+  "geography_temporal_compatibility_unknown": true,
+  "validation_data_previously_explored": true,
+  "external_validation": false,
+  "threshold_or_hyperparameters_retuned": false,
+  "frequency_model_trained": false,
+  "frequency_encodings_used": false,
+  "n_test_predictions": 50000,
+  "test_predictions_path": "reports/final/gravite_test.csv",
+  "reload_verified": true,
+  "prediction_target_invariance_verified": true,
+  "population_invariance_verified": true,
+  "selection_reason": "Modele unique choisi pour sa simplicite et l’absence de gain stable des modeles par tranches.",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "xgboost": "3.0.2",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "python": "3.12.3"
+  }
+}

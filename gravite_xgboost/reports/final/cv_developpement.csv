@@ -1,0 +1,2 @@
+version,n_variables,n_evaluation,rmse,mae,gamma_deviance,r2,ratio_predit_observe,moyenne_predite
+sans_taille_commune,4,2356,1448.339903817933,924.335185038076,0.3958438676786495,0.0176894977449121,0.9952644321949,1758.9359298472898

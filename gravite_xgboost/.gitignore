@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+models/*.joblib
+!models/gravite_final.joblib
+reports/**/decoupage*.csv
+reports/**/predictions*.csv
+reports/**/gravite_test*.csv
+reports/decoupage*.csv
+reports/gravite_test*.csv
