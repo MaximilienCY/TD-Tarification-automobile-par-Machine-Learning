@@ -1,0 +1,166 @@
+{
+  "protocol": {
+    "variants": [
+      "baseline",
+      "main_effects",
+      "power_vehicle_age",
+      "power_license_experience",
+      "speed_driver_age",
+      "all_interactions"
+    ],
+    "frequency": "frozen source-branch OOF blend",
+    "frequency_cache_sha256": "fe04364c1c50efe7f6cb278b0c9271913c1375ffc47fec8a60bcf2c64860f6a8",
+    "severity_configuration": {
+      "spec": {
+        "blocks": [
+          "geographie"
+        ],
+        "drop": [
+          "classe_taille_commune"
+        ]
+      },
+      "params": {
+        "n_estimators": 400,
+        "max_depth": 1,
+        "learning_rate": 0.03,
+        "min_child_weight": 40,
+        "reg_lambda": 20,
+        "reg_alpha": 0,
+        "subsample": 0.9,
+        "colsample_bytree": 1.0
+      },
+      "objective": "reg:gamma"
+    },
+    "training_rows": 50000,
+    "positive_claims": 2917,
+    "group": "id_client",
+    "fold_seed": 42,
+    "baseline_source_parity_exact": true,
+    "production_model_changed": false,
+    "limitations": "Historical frequency calibration and model selection reused some OOF labels. Secondary holdout was previously explored. No fresh external validation."
+  },
+  "results": {
+    "baseline": {
+      "premium_rmse": 541.6100732073023,
+      "premium_mae": 190.29886568729916,
+      "premium_predicted_observed_ratio": 0.9931154624266747,
+      "severity_rmse_positive": 1454.2415739148787,
+      "fold_rmse": [
+        553.1151014279634,
+        558.8582105592628,
+        530.2430512948573,
+        501.6728971991512,
+        561.7945997570471
+      ],
+      "delta_rmse": 0.0,
+      "folds_better_than_baseline": 0,
+      "delta_client_bootstrap_99_interval": [
+        0.0,
+        0.0
+      ],
+      "prior_holdout_rmse": 535.2139252761474
+    },
+    "main_effects": {
+      "premium_rmse": 541.6353439376156,
+      "premium_mae": 190.1572068801626,
+      "premium_predicted_observed_ratio": 0.9907216294808256,
+      "severity_rmse_positive": 1451.8665437382795,
+      "fold_rmse": [
+        552.9642536382406,
+        559.0263071063968,
+        530.306386637902,
+        501.70980253090505,
+        561.8049446454377
+      ],
+      "delta_rmse": 0.025270730313309286,
+      "folds_better_than_baseline": 1,
+      "delta_client_bootstrap_99_interval": [
+        -0.06923505776536444,
+        0.12744381168209973
+      ],
+      "prior_holdout_rmse": 535.1053609138866
+    },
+    "power_vehicle_age": {
+      "premium_rmse": 541.6476497213698,
+      "premium_mae": 190.1102502271895,
+      "premium_predicted_observed_ratio": 0.9902207885346394,
+      "severity_rmse_positive": 1452.619652587628,
+      "fold_rmse": [
+        553.0543026120225,
+        559.0152608614118,
+        530.2731800413509,
+        501.70867683411734,
+        561.81896211461
+      ],
+      "delta_rmse": 0.037576514067495737,
+      "folds_better_than_baseline": 1,
+      "delta_client_bootstrap_99_interval": [
+        -0.0691055863926448,
+        0.14864676410304434
+      ],
+      "prior_holdout_rmse": 535.0575874139677
+    },
+    "power_license_experience": {
+      "premium_rmse": 541.6496093131498,
+      "premium_mae": 190.08465709414727,
+      "premium_predicted_observed_ratio": 0.9898505746648479,
+      "severity_rmse_positive": 1452.5590929951406,
+      "fold_rmse": [
+        552.9777730510277,
+        559.0655329686182,
+        530.2791924037174,
+        501.68512510037607,
+        561.8690795006851
+      ],
+      "delta_rmse": 0.03953610584744638,
+      "folds_better_than_baseline": 1,
+      "delta_client_bootstrap_99_interval": [
+        -0.058232464771354554,
+        0.14584253434164157
+      ],
+      "prior_holdout_rmse": 535.0834110305121
+    },
+    "speed_driver_age": {
+      "premium_rmse": 541.6353023747762,
+      "premium_mae": 190.13307775527406,
+      "premium_predicted_observed_ratio": 0.9904588299963506,
+      "severity_rmse_positive": 1451.900365980307,
+      "fold_rmse": [
+        552.9597804377386,
+        559.0222125689698,
+        530.2945953181897,
+        501.708513771137,
+        561.8255054704887
+      ],
+      "delta_rmse": 0.025229167473867165,
+      "folds_better_than_baseline": 1,
+      "delta_client_bootstrap_99_interval": [
+        -0.06645831696567768,
+        0.1262423680564
+      ],
+      "prior_holdout_rmse": 535.1034054238023
+    },
+    "all_interactions": {
+      "premium_rmse": 541.6609090321111,
+      "premium_mae": 190.03599775699087,
+      "premium_predicted_observed_ratio": 0.9893215347049799,
+      "severity_rmse_positive": 1453.1651642330562,
+      "fold_rmse": [
+        553.0687102775667,
+        559.0600693171847,
+        530.2317179362328,
+        501.67488110784524,
+        561.8934227746831
+      ],
+      "delta_rmse": 0.05083582480881432,
+      "folds_better_than_baseline": 2,
+      "delta_client_bootstrap_99_interval": [
+        -0.06297827132297527,
+        0.16300696878208212
+      ],
+      "prior_holdout_rmse": 535.041442527348
+    }
+  },
+  "eligible_challengers": [],
+  "decision": "Retain production model"
+}

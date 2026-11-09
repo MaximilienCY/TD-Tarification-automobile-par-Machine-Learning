@@ -4,7 +4,8 @@ __pycache__/
 .pytest_cache/
 .cache/
 *.egg-info/
-outputs/
+outputs/*
+!outputs/submission.csv
 Data/predictions/
 Data/resultats/
 models/*.joblib

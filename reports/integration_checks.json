@@ -8,5 +8,17 @@
   },
   "data_identical_across_branches": true,
   "severity_artifact_preserved": true,
-  "shared_holdout_clients": true
+  "shared_holdout_clients": true,
+  "full_data_production": {
+    "frequency_fit_contracts": 50000,
+    "severity_fit_positive_claims": 2917,
+    "severity_configuration_matches_source": true,
+    "source_severity_artifact_unchanged": true,
+    "notebook_all_cells_executed": true,
+    "submission_rows": 50000,
+    "submission_index_matches_test": true,
+    "submission_product_verified": true,
+    "serialized_predictions_match_export": true,
+    "mean_absolute_submission_change": 5.257460549556907
+  }
 }

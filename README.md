@@ -9,7 +9,7 @@ dans [archive/](archive/README.md).
 
 ## Composants retenus
 
-- **Gravité :** le XGBoost Gamma publié de `main`, conservé sans réentraînement.
+- **Gravité :** le XGBoost Gamma publié de `main`, réentraîné pour la production avec ses paramètres inchangés.
   Variables : `type_contrat`, `prix_vehicule`, `anciennete_vehicule`,
   `classe_geographique`. Les sources, le référentiel et l’artefact original
   sont dans `components/severity/`. La proposition exploratoire à trois variables
@@ -27,7 +27,7 @@ sources sur 5 000 contrats d’apprentissage et 200 de test : égalité numériq
 réglages, les graines et le poids du mélange sont conservés. Le runtime commun
 utilise XGBoost CPU 3.0.2, compatible avec l’artefact de gravité ; la branche de
 fréquence déclarait 3.4.1. Les probabilités de cette intégration sont régénérées,
-avec le découpage commun ci-dessous, et ne sont pas présentées comme identiques
+avec une validation commune puis un ajustement final sur toutes les données, et ne sont pas présentées comme identiques
 aux anciens exports de cette branche.
 
 ## Découpage commun
@@ -38,11 +38,17 @@ aux anciens exports de cette branche.
 - Validation : **10 036 contrats**, dont **561 sinistres positifs**.
 - Aucun client commun.
 
-La fréquence est ajustée sur les seuls 80 %. Les taux cibles sont calculés hors
-pli par client. La calibration de Platt utilise les probabilités hors pli du
-développement, en excluant le premier pli comme dans la recette source. Le
-mélange reste fixé à 50/50. La gravité publiée reste inchangée, déjà ajustée sur
-les sinistrés de ces mêmes 80 %. Aucun composant n’est réentraîné sur les 20 %.
+Cette séparation sert uniquement à l’évaluation : fréquence ajustée sur les 80 %,
+gravité originale apprise sur leurs sinistres positifs. Les taux cibles et la
+calibration de fréquence sont appris hors pli par client dans le développement.
+
+Après cette évaluation, les deux recettes sont réentraînées indépendamment sur
+**50 000 contrats** pour la fréquence et **2 917 sinistres positifs** pour la gravité.
+La calibration de production utilise les prédictions hors pli du portefeuille
+complet, en excluant le premier pli comme dans la recette source. Paramètres,
+variables, graines et mélange 50/50 restent inchangés. Le test Kaggle ne sert
+jamais à l’apprentissage. Les mesures suivantes décrivent le modèle d’évaluation,
+pas une évaluation hors échantillon du modèle final réentraîné.
 
 **RMSE de prime sur les 10 036 contrats de validation : 535.21 €**,
 contre **539.12 €** pour la prime constante apprise sur les 80 %.
@@ -62,20 +68,21 @@ python3 -m venv .venv
 .venv/bin/python run.py predict --input Data/test.csv --output outputs/submission.csv --components outputs/test_components.csv
 ```
 
-Pour reconstruire la fréquence, conserver la gravité, évaluer puis exporter :
+Pour évaluer puis réentraîner les deux composants sur tout le train et exporter :
 
 ```sh
 .venv/bin/python run.py train --threads 2
 ```
 
-Cette commande ajuste les 20 modèles dans cinq plis de calibration puis les 20
-modèles finaux. Le modèle combiné prêt à utiliser est `models/global_model.joblib`,
+Cette commande exécute séparément l’évaluation 80/20 et l’ajustement final.
+Chaque ajustement de fréquence entraîne les 20 modèles dans cinq plis de
+calibration puis les 20 modèles finaux. Le modèle combiné prêt à utiliser est `models/global_model.joblib`,
 avec ses paramètres, origines et contrôles dans `models/global_model.json`.
 
 La soumission courante est **`outputs/submission.csv`**, colonnes **`index,pred`**.
 `pred` est la prime pure ; les composantes sont dans `outputs/test_components.csv`.
-Les exports individuels restent locaux et sont ignorés par Git. Le modèle et
-les résultats agrégés sont versionnés. Aucune soumission Kaggle n’est automatique.
+La soumission courante est versionnée avec le modèle et les résultats agrégés.
+Les autres exports individuels restent locaux et sont ignorés par Git. Aucune soumission Kaggle n’est automatique.
 
 ## Organisation
 
@@ -83,7 +90,7 @@ les résultats agrégés sont versionnés. Aucune soumission Kaggle n’est auto
 modele_global.ipynb          notebook principal
 run.py                      entraîner, prédire, vérifier
 src/pricing_model/          fréquence et combinaison
-components/severity/        gravité publiée inchangée
+components/severity/        recette et artefact de gravité d’origine
 models/                     modèle global et manifeste
 reports/                    évaluation agrégée
 Data/                       données source communes
@@ -94,3 +101,13 @@ integration_sources.json    branches et commits d’origine
 ```
 
 Tests : `python -m pytest`. Les tests des archives ne sont pas collectés.
+
+## Expérience contrôlée sur la gravité
+
+Les ajouts de puissance, expérience du permis et vitesse × âge du conducteur
+principal ont été comparés sur les mêmes cinq plis par client, à fréquence fixe.
+Aucun candidat ne démontre un gain stable sur la RMSE de prime ; le modèle
+principal est conservé. Résultats et limites :
+[reports/severity_interactions/README.md](reports/severity_interactions/README.md).
+Le notebook [experiments/severity_interactions.ipynb](experiments/severity_interactions.ipynb)
+affiche les résultats ; le script voisin permet de reproduire l’expérience.

@@ -54,8 +54,11 @@ def test_saved_model_targets_order_and_product(sample):
     reverse = model.predict_components(frame.iloc[::-1])
     pd.testing.assert_frame_equal(result.iloc[::-1].reset_index(drop=True), reverse)
     manifest = json.loads((ROOT / 'models/global_model.json').read_text())
-    assert manifest['frequency']['fit_contracts'] == 39964
-    assert manifest['severity']['refitted'] is False
+    assert model.frequency.n_fit_ == manifest['frequency']['fit_contracts'] == 50000
+    assert manifest['severity']['refitted'] is True
+    assert manifest['severity']['fit_positive_claims'] == 2917
+    assert manifest['production_fit']['test_rows_used_for_fit'] == 0
+    assert manifest['validation']['training_contracts'] == 39964
 
 
 def test_duplicate_index_rejected(sample):

@@ -1,5 +1,5 @@
 {
-  "version": "global-2026-11-09",
+  "version": "global-2026-11-09-full-data",
   "status": "current main model",
   "formula": "P(claim | X) * E[claim amount | claim, X]",
   "sources": {
@@ -9,17 +9,52 @@
     "frequency_commit": "682b3c5604b3fdf0ff9425a6c5b86c97df7640a1"
   },
   "model_path": "models/global_model.joblib",
-  "model_sha256": "b16fa824e53e824894c084e6fb0c4193a5e8058b21501d7e9b2cff06c4d27fe7",
+  "model_sha256": "83bb041c2f79921ba8d4a9f04d163f113ebdd133391eaf0546a9024f506849d9",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost-cpu": "3.0.2",
+    "joblib": "1.6.0"
+  },
+  "source_sha256": {
+    "run.py": "a2d6cfdb660a7d2678f6c39072847828452b2e26d997d9929a0780407e9fbb6e",
+    "src/pricing_model/__init__.py": "d0fcd6c2ee36a9878aa4d5df6ede5dc76b6bf3391c3be7798e521eccf13f2cc0",
+    "src/pricing_model/frequency.py": "56b6438698686a2859f5f94643dc662c77533d1d6baf6dcd51d9104b77a18fa1",
+    "src/pricing_model/global_model.py": "9d2d12ac1d6c1461e7af68f209114ecad11c1c8d30965f1bb03cd3c5810c5e3b"
+  },
   "severity": {
-    "model": "preserved four-variable XGBoost Gamma",
-    "sha256": "952a5f9241a3919b6f35dd9aef9d995fa627bbbc7b9106b6fa5164643856fc4f",
+    "model": "four-variable XGBoost Gamma, original recipe refitted",
+    "source_artifact_sha256": "952a5f9241a3919b6f35dd9aef9d995fa627bbbc7b9106b6fa5164643856fc4f",
+    "configuration": {
+      "spec": {
+        "blocks": [
+          "geographie"
+        ],
+        "drop": [
+          "classe_taille_commune"
+        ]
+      },
+      "params": {
+        "n_estimators": 400,
+        "max_depth": 1,
+        "learning_rate": 0.03,
+        "min_child_weight": 40,
+        "reg_lambda": 20,
+        "reg_alpha": 0,
+        "subsample": 0.9,
+        "colsample_bytree": 1.0
+      },
+      "objective": "reg:gamma"
+    },
     "features": [
       "type_contrat",
       "prix_vehicule",
       "anciennete_vehicule",
       "classe_geographique"
     ],
-    "refitted": false
+    "refitted": true,
+    "fit_positive_claims": 2917
   },
   "frequency": {
     "model": "50% logistic E + 50% Platt-calibrated XGBoost ensemble",
@@ -81,9 +116,15 @@
       4
     ],
     "blend_weight": 0.5,
-    "fit_contracts": 39964,
-    "calibration_contracts": 31970
+    "fit_contracts": 50000,
+    "calibration_contracts": 39999
   },
+  "production_fit": {
+    "training_contracts": 50000,
+    "positive_claims": 2917,
+    "test_rows_used_for_fit": 0
+  },
+  "validation_scope": "separate 80-percent fit; not the full-data production model",
   "split": {
     "method": "GroupShuffleSplit",
     "test_size": 0.2,
@@ -109,18 +150,5 @@
   "validation_previously_explored": true,
   "external_validation": false,
   "reload_verified": true,
-  "prediction_target_invariance_verified": true,
-  "versions": {
-    "numpy": "2.5.3",
-    "pandas": "3.0.6",
-    "scikit-learn": "1.9.1",
-    "xgboost-cpu": "3.0.2",
-    "joblib": "1.6.0"
-  },
-  "source_sha256": {
-    "run.py": "baf1467412efe332ffa336097b9d1a3262e6756e08e72ea19928c20030a12f70",
-    "src/pricing_model/__init__.py": "d0fcd6c2ee36a9878aa4d5df6ede5dc76b6bf3391c3be7798e521eccf13f2cc0",
-    "src/pricing_model/frequency.py": "56b6438698686a2859f5f94643dc662c77533d1d6baf6dcd51d9104b77a18fa1",
-    "src/pricing_model/global_model.py": "9d2d12ac1d6c1461e7af68f209114ecad11c1c8d30965f1bb03cd3c5810c5e3b"
-  }
+  "prediction_target_invariance_verified": true
 }
