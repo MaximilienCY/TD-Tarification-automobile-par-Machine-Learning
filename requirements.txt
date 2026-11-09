@@ -1,14 +1,13 @@
-# Python 3.12; direct dependencies tested in this project.
+# Shared CPU runtime; retain the severity artifact's XGBoost version.
 numpy==2.5.3
 pandas==3.0.6
 scipy==1.18.1
 scikit-learn==1.9.1
-catboost==1.2.10
-lightgbm==4.7.0
-matplotlib==3.11.2
+xgboost-cpu==3.0.2
 joblib==1.6.0
 threadpoolctl==3.7.0
-nbformat==5.11.1
-nbclient==0.11.0
-ipykernel==7.4.0
-pytest==9.1.1
+matplotlib==3.11.2
+nbformat==5.9.1
+nbclient==0.8.0
+ipykernel==6.29.3
+pytest>=8,<9

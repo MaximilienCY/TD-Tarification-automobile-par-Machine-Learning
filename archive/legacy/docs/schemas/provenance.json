@@ -1,0 +1,13 @@
+{
+  "recipe": "frequency_curves_1365_657",
+  "source_model_sha256": "9ba12024b70cd1f08e3389e6a54755d926427a2d451eedffd9eca02f3ad9b796",
+  "pages": [
+    "01_vue_ensemble",
+    "02_detail_frequence",
+    "03_detail_gravite",
+    "04_validation_et_limites"
+  ],
+  "excalidraw_elements": 189,
+  "metadata_sha256": "502a7a378ba7b6776de8b59e24cb9767dde16d78396a41bd2ce2b3e15aa5ed77",
+  "note": "Schémas explicatifs uniquement ; aucun modèle réajusté, aucune prédiction modifiée."
+}

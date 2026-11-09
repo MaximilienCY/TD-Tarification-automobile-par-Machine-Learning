@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>02_detail_frequence</title>
+<style>text {font-family: "DejaVu Sans", Arial, sans-serif;}</style>
+<rect x="0" y="0" width="1920" height="1080" rx="16" fill="#f6f7f4" stroke="none" stroke-width="1.4"/>
+<text x="64" y="53.67" font-size="19" font-weight="700" fill="#506777">TARIFICATION AUTOMOBILE  /  MODÈLE PRINCIPAL</text>
+<text x="1789.166015625" y="53.67" font-size="19" font-weight="400" fill="#506777">02 / 04</text>
+<text x="64" y="118.92" font-size="44" font-weight="700" fill="#16354b">Fréquence : prédire une probabilité</text>
+<text x="64" y="163.32" font-size="24" font-weight="400" fill="#506777">Apprentissage sur les 50 000 contrats · cible : 1 si sinistre, 0 sinon.</text>
+<polyline points="64,187 1856,187" fill="none" stroke="#b9c6ca" stroke-width="1" stroke-linejoin="round"/>
+<text x="64" y="1052.88" font-size="16" font-weight="400" fill="#506777">FRÉQUENCE · Régression logistique et correction de logit</text>
+<text x="1384.078125" y="1052.88" font-size="16" font-weight="400" fill="#506777">Source : modèle et diagnostics du dépôt · 20 octobre 2026</text>
+<rect x="64" y="224" width="452" height="563" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="261.74" font-size="18" font-weight="700" fill="#506777">ENTRÉES ET TRANSFORMATIONS</text>
+<text x="88" y="298.39" font-size="23" font-weight="700" fill="#16354b">Caractéristiques du contrat,</text>
+<text x="88" y="329.66999999999996" font-size="23" font-weight="700" fill="#16354b">du véhicule et des conducteurs</text>
+<text x="88" y="387.46" font-size="22" font-weight="700" fill="#007b79">Numériques</text>
+<text x="88" y="426.39" font-size="23" font-weight="400" fill="#16354b">Médianes apprises sur le train</text>
+<text x="88" y="457.66999999999996" font-size="23" font-weight="400" fill="#16354b">log1p de certaines variables</text>
+<text x="88" y="488.95" font-size="23" font-weight="400" fill="#16354b">Standardisation</text>
+<text x="88" y="540.46" font-size="22" font-weight="700" fill="#007b79">Catégorielles</text>
+<text x="88" y="578.46" font-size="22" font-weight="400" fill="#16354b">One-hot, modalités rares regroupées</text>
+<text x="88" y="608.38" font-size="22" font-weight="400" fill="#16354b">Marque / modèle / département :</text>
+<text x="88" y="638.3000000000001" font-size="22" font-weight="400" fill="#16354b">encodage cible lissé hors client</text>
+<text x="88" y="707.46" font-size="22" font-weight="400" fill="#506777">Plus de 3 variables au total.</text>
+<text x="88" y="737.38" font-size="22" font-weight="400" fill="#506777">Ni identifiants, ni sexes, ni cibles</text>
+<text x="88" y="767.3000000000001" font-size="22" font-weight="400" fill="#506777">parmi les prédicteurs.</text>
+<rect x="610" y="224" width="536" height="211" rx="16" fill="#e7f3f0" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="634" y="261.74" font-size="18" font-weight="700" fill="#007b79">01  BASE LOGISTIQUE</text>
+<text x="634" y="302.18" font-size="26" font-weight="700" fill="#16354b">p₀ = sigmoid(b + β × X préparé)</text>
+<text x="634" y="349.39" font-size="23" font-weight="400" fill="#16354b">Pénalisation L2 : C = 0,1</text>
+<text x="634" y="380.66999999999996" font-size="23" font-weight="400" fill="#16354b">Apprentissage par log-loss</text>
+<text x="634" y="411.95" font-size="23" font-weight="400" fill="#16354b">Sans rééquilibrage des classes</text>
+<polyline points="516,395 560,395 560,329 610,329" fill="none" stroke="#007b79" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="610,329 597.0,323.0 597.0,335.0" fill="#007b79"/>
+<rect x="610" y="510" width="536" height="277" rx="16" fill="#e7f3f0" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="634" y="547.74" font-size="18" font-weight="700" fill="#007b79">02  CORRECTION δ(X)</text>
+<text x="634" y="585.25" font-size="25" font-weight="700" fill="#16354b">Courbes souples d’âge du véhicule</text>
+<text x="634" y="629.39" font-size="23" font-weight="400" fill="#16354b">Splines : 4 nœuds, degré 2</text>
+<text x="634" y="660.67" font-size="23" font-weight="400" fill="#16354b">Contrat + usage + âge × contrat</text>
+<text x="634" y="691.95" font-size="23" font-weight="400" fill="#16354b">Interactions multipliées par 0,5</text>
+<text x="634" y="723.23" font-size="23" font-weight="400" fill="#16354b">Log-loss + pénalisation L2 : α = 100</text>
+<text x="634" y="768.6" font-size="20" font-weight="400" fill="#007b79">Apprise à partir de p₀ calculées hors client.</text>
+<polyline points="878,435 878,510" fill="none" stroke="#007b79" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="878,510 884.0,497.0 872.0,497.0" fill="#007b79"/>
+<rect x="1242" y="265" width="614" height="258" rx="18" fill="#007b79" stroke="none" stroke-width="1.4"/>
+<text x="1266" y="309.74" font-size="18" font-weight="700" fill="#ffffff">03  PROBABILITÉ FINALE</text>
+<text x="1317.625" y="379.76" font-size="32" font-weight="700" fill="#ffffff">p = sigmoid(logit(p₀) + δ)</text>
+<text x="1266" y="432.39" font-size="23" font-weight="400" fill="#ffffff">La correction augmente ou réduit le risque</text>
+<text x="1266" y="463.66999999999996" font-size="23" font-weight="400" fill="#ffffff">selon l’âge, le contrat et l’usage.</text>
+<text x="1266" y="494.95" font-size="23" font-weight="400" fill="#ffffff">La sortie reste une probabilité entre 0 et 1.</text>
+<polyline points="1146,650 1196,650 1196,448 1242,448" fill="none" stroke="#007b79" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1242,448 1229.0,442.0 1229.0,454.0" fill="#007b79"/>
+<polyline points="1146,329 1242,329" fill="none" stroke="#007b79" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1242,329 1229.0,323.0 1229.0,335.0" fill="#007b79"/>
+<rect x="1242" y="577" width="614" height="210" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1266" y="614.74" font-size="18" font-weight="700" fill="#506777">ÉVITER LA FUITE D’INFORMATION</text>
+<text x="1266" y="652.25" font-size="25" font-weight="700" fill="#16354b">Un même client reste dans le même pli.</text>
+<text x="1266" y="695.46" font-size="22" font-weight="400" fill="#16354b">Encodages : 5 plis internes par client.</text>
+<text x="1266" y="725.38" font-size="22" font-weight="400" fill="#16354b">Correction : probabilités issues de 3 sous-plis.</text>
+<text x="1266" y="755.3000000000001" font-size="22" font-weight="400" fill="#16354b">Imputations et encodages appris sans les exclus.</text>
+<rect x="64" y="855" width="1792" height="149" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="892.74" font-size="18" font-weight="700" fill="#506777">DIAGNOSTIC SUR CLIENTS EXCLUS</text>
+<text x="88" y="945.97" font-size="29" font-weight="700" fill="#007b79">AUC : 0,6533</text>
+<text x="470" y="945.97" font-size="29" font-weight="700" fill="#007b79">Log-loss : 0,21393</text>
+<text x="1020" y="945.97" font-size="29" font-weight="700" fill="#007b79">Brier : 0,05407</text>
+<text x="88" y="987.53" font-size="21" font-weight="400" fill="#506777">Calibration vérifiée. La matrice de confusion illustre un seuil ; elle ne pilote pas la prime.</text>
+</svg>

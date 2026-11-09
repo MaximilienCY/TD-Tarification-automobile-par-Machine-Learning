@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>04_validation_et_limites</title>
+<style>text {font-family: "DejaVu Sans", Arial, sans-serif;}</style>
+<rect x="0" y="0" width="1920" height="1080" rx="16" fill="#f6f7f4" stroke="none" stroke-width="1.4"/>
+<text x="64" y="53.67" font-size="19" font-weight="700" fill="#506777">TARIFICATION AUTOMOBILE  /  MODÈLE PRINCIPAL</text>
+<text x="1789.166015625" y="53.67" font-size="19" font-weight="400" fill="#506777">04 / 04</text>
+<text x="64" y="118.92" font-size="44" font-weight="700" fill="#16354b">Valider, interpréter et connaître les limites</text>
+<text x="64" y="163.32" font-size="24" font-weight="400" fill="#506777">Le modèle retenu est une recette figée ; les diagnostics ne constituent pas un nouveau test indépendant.</text>
+<polyline points="64,187 1856,187" fill="none" stroke="#b9c6ca" stroke-width="1" stroke-linejoin="round"/>
+<text x="64" y="1052.88" font-size="16" font-weight="400" fill="#506777">VALIDATION · Clients exclus, erreurs de prime et limites d’usage</text>
+<text x="1384.078125" y="1052.88" font-size="16" font-weight="400" fill="#506777">Source : modèle et diagnostics du dépôt · 20 octobre 2026</text>
+<rect x="64" y="224" width="530" height="221" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="261.74" font-size="18" font-weight="700" fill="#506777">01  SÉPARER PAR CLIENT</text>
+<text x="88" y="303.04" font-size="28" font-weight="700" fill="#16354b">3 plis de validation</text>
+<text x="88" y="351.39" font-size="23" font-weight="400" fill="#16354b">Environ 2/3 pour apprendre, 1/3 exclu.</text>
+<text x="88" y="382.66999999999996" font-size="23" font-weight="400" fill="#16354b">Chaque client appartient à un seul pli.</text>
+<text x="88" y="413.95" font-size="23" font-weight="400" fill="#16354b">On recommence pour couvrir tout le train.</text>
+<rect x="670" y="224" width="560" height="221" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="694" y="261.74" font-size="18" font-weight="700" fill="#506777">02  APPRENDRE SANS LES CLIENTS EXCLUS</text>
+<text x="694" y="301.18" font-size="26" font-weight="700" fill="#16354b">Préparation + fréquence + gravité</text>
+<text x="694" y="350.46" font-size="22" font-weight="400" fill="#16354b">Toutes les étapes sont ajustées sur le train.</text>
+<text x="694" y="380.38" font-size="22" font-weight="400" fill="#16354b">Les auxiliaires sont calculés hors client.</text>
+<text x="694" y="410.29999999999995" font-size="22" font-weight="400" fill="#16354b">On applique ensuite la recette aux exclus.</text>
+<rect x="1306" y="224" width="550" height="221" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1330" y="261.74" font-size="18" font-weight="700" fill="#506777">03  ÉVALUER PUIS FIGER</text>
+<text x="1330" y="302.11" font-size="27" font-weight="700" fill="#16354b">Comparer prime et coût réel</text>
+<text x="1330" y="349.53" font-size="21" font-weight="400" fill="#16354b">Calibration, résidus, segments et variables.</text>
+<text x="1330" y="378.09" font-size="21" font-weight="400" fill="#16354b">Puis réapprentissage sur tout le train.</text>
+<text x="1330" y="406.65" font-size="21" font-weight="400" fill="#16354b">Test sans cibles : aucune RMSE locale de test.</text>
+<polyline points="594,334 670,334" fill="none" stroke="#506777" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="670,334 657.0,328.0 657.0,340.0" fill="#506777"/>
+<polyline points="1230,334 1306,334" fill="none" stroke="#506777" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1306,334 1293.0,328.0 1293.0,340.0" fill="#506777"/>
+<rect x="64" y="511" width="1166" height="204" rx="18" fill="#16354b" stroke="none" stroke-width="1.4"/>
+<text x="88" y="552.74" font-size="18" font-weight="700" fill="#d8e4e8">MÉTRIQUE PRINCIPALE : RMSE DE LA PRIME</text>
+<text x="88" y="606.9" font-size="30" font-weight="700" fill="#ffffff">RMSE = √ moyenne[(prime prédite − coût réel)²]</text>
+<text x="88" y="671.48" font-size="36" font-weight="700" fill="#ffffff">541,916 €</text>
+<text x="380" y="664.32" font-size="24" font-weight="400" fill="#d8e4e8">contre 541,971 € avant la correction de fréquence</text>
+<text x="88" y="696.6" font-size="20" font-weight="400" fill="#d8e4e8">Coût réel = 0 sans sinistre, montant observé sinon. Gain local faible : 0,055 €.</text>
+<rect x="1306" y="511" width="550" height="204" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1330" y="548.74" font-size="18" font-weight="700" fill="#506777">SCORE PUBLIC KAGGLE COMMUNIQUÉ</text>
+<text x="1330" y="599.34" font-size="38" font-weight="700" fill="#16354b">1 365,657</text>
+<text x="1330" y="641.53" font-size="21" font-weight="400" fill="#506777">Reçu utilisateur du 12 octobre 2026.</text>
+<text x="1330" y="670.0899999999999" font-size="21" font-weight="400" fill="#506777">Population différente du diagnostic local.</text>
+<text x="1330" y="698.65" font-size="21" font-weight="400" fill="#506777">Score privé inconnu ; non revérifié sur Kaggle.</text>
+<rect x="64" y="784" width="530" height="220" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="821.74" font-size="18" font-weight="700" fill="#506777">FORCES</text>
+<text x="88" y="857.39" font-size="23" font-weight="400" fill="#16354b">Décomposition métier interprétable</text>
+<text x="88" y="888.67" font-size="23" font-weight="400" fill="#16354b">Plis et encodages séparés par client</text>
+<text x="88" y="919.95" font-size="23" font-weight="400" fill="#16354b">Régularisation et sorties positives</text>
+<text x="88" y="951.23" font-size="23" font-weight="400" fill="#16354b">50 000 primes reproduites et contrôlées</text>
+<rect x="670" y="784" width="560" height="220" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="694" y="821.74" font-size="18" font-weight="700" fill="#506777">FAIBLESSES</text>
+<text x="694" y="856.46" font-size="22" font-weight="400" fill="#16354b">Seulement 2 917 sinistres pour apprendre</text>
+<text x="694" y="886.38" font-size="22" font-weight="400" fill="#16354b">Gros coûts : forte influence sur la RMSE</text>
+<text x="694" y="916.3000000000001" font-size="22" font-weight="400" fill="#16354b">MAE légèrement plus élevée après correction</text>
+<text x="694" y="946.22" font-size="22" font-weight="400" fill="#16354b">Données déjà explorées, gain très faible</text>
+<rect x="1306" y="784" width="550" height="220" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1330" y="821.74" font-size="18" font-weight="700" fill="#506777">PROCHAINES ÉTAPES</text>
+<text x="1330" y="855.53" font-size="21" font-weight="400" fill="#16354b">Nouvelle cohorte de validation</text>
+<text x="1330" y="884.0899999999999" font-size="21" font-weight="400" fill="#16354b">Clarifier dates, unités et exposition</text>
+<text x="1330" y="912.65" font-size="21" font-weight="400" fill="#16354b">Suivre calibration et dérives par segment</text>
+<text x="1330" y="941.21" font-size="21" font-weight="400" fill="#16354b">Exercice prêt ; tarif commercial à approfondir</text>
+</svg>

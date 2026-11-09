@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>03_detail_gravite</title>
+<style>text {font-family: "DejaVu Sans", Arial, sans-serif;}</style>
+<rect x="0" y="0" width="1920" height="1080" rx="16" fill="#f6f7f4" stroke="none" stroke-width="1.4"/>
+<text x="64" y="53.67" font-size="19" font-weight="700" fill="#506777">TARIFICATION AUTOMOBILE  /  MODÈLE PRINCIPAL</text>
+<text x="1789.166015625" y="53.67" font-size="19" font-weight="400" fill="#506777">03 / 04</text>
+<text x="64" y="118.92" font-size="44" font-weight="700" fill="#16354b">Gravité : Gamma et deux corrections</text>
+<text x="64" y="163.32" font-size="24" font-weight="400" fill="#506777">Apprentissage sur 2 917 sinistres positifs · cible : montant du sinistre en euros.</text>
+<polyline points="64,187 1856,187" fill="none" stroke="#b9c6ca" stroke-width="1" stroke-linejoin="round"/>
+<text x="64" y="1052.88" font-size="16" font-weight="400" fill="#506777">GRAVITÉ · Une moyenne conditionnelle pour chaque prospect</text>
+<text x="1384.078125" y="1052.88" font-size="16" font-weight="400" fill="#506777">Source : modèle et diagnostics du dépôt · 20 octobre 2026</text>
+<rect x="64" y="224" width="452" height="548" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="261.74" font-size="18" font-weight="700" fill="#506777">DONNÉES D’APPRENTISSAGE</text>
+<text x="88" y="298.25" font-size="25" font-weight="700" fill="#16354b">Sinistres positifs uniquement</text>
+<text x="88" y="346.39" font-size="23" font-weight="400" fill="#16354b">Coût moyen : 1 771,84 €</text>
+<text x="88" y="377.66999999999996" font-size="23" font-weight="400" fill="#16354b">Médiane : 1 236,00 €</text>
+<text x="88" y="408.95" font-size="23" font-weight="400" fill="#16354b">Maximum : 21 826,96 €</text>
+<text x="88" y="460.53" font-size="21" font-weight="400" fill="#506777">Pas de suppression des gros sinistres.</text>
+<polyline points="88,494 492,494" fill="none" stroke="#b9c6ca" stroke-width="1" stroke-linejoin="round"/>
+<text x="88" y="538.39" font-size="23" font-weight="700" fill="#b45c36">Pour XGBoost et Ridge</text>
+<text x="88" y="582.39" font-size="23" font-weight="400" fill="#16354b">Gamma et probabilité auxiliaires</text>
+<text x="88" y="613.67" font-size="23" font-weight="400" fill="#16354b">calculés hors client.</text>
+<text x="88" y="644.95" font-size="23" font-weight="400" fill="#16354b">Poids ∝ p_aux × Gamma_aux²</text>
+<text x="88" y="702.6" font-size="20" font-weight="400" fill="#506777">La probabilité auxiliaire sert aux poids ;</text>
+<text x="88" y="729.8000000000001" font-size="20" font-weight="400" fill="#506777">elle diffère de la fréquence finale.</text>
+<text x="88" y="757.74" font-size="18" font-weight="400" fill="#506777">ε = 10⁻⁸ : plancher numérique positif.</text>
+<rect x="580" y="224" width="388" height="328" rx="16" fill="#fbefe7" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="604" y="261.74" font-size="18" font-weight="700" fill="#b45c36">01  GAMMA · ANCRE</text>
+<text x="604" y="302.04" font-size="28" font-weight="700" fill="#16354b">g = exp(b + β × X)</text>
+<text x="604" y="353.32" font-size="24" font-weight="400" fill="#16354b">Contrat</text>
+<text x="604" y="385.96" font-size="24" font-weight="400" fill="#16354b">Âge du véhicule</text>
+<text x="604" y="418.6" font-size="24" font-weight="400" fill="#16354b">Utilisation</text>
+<text x="604" y="468.39" font-size="23" font-weight="400" fill="#16354b">Lien log · α = 0,1</text>
+<text x="604" y="499.66999999999996" font-size="23" font-weight="400" fill="#16354b">Déviance Gamma + L2</text>
+<text x="604" y="530.95" font-size="23" font-weight="400" fill="#16354b">Montant toujours positif</text>
+<rect x="1012" y="224" width="400" height="328" rx="16" fill="#fbefe7" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1036" y="261.74" font-size="18" font-weight="700" fill="#b45c36">02  GAMMA CORRIGÉ XGBOOST</text>
+<text x="1036" y="299.25" font-size="25" font-weight="700" fill="#16354b">sX = max(g × ratio, ε)</text>
+<text x="1036" y="347.53" font-size="21" font-weight="400" fill="#16354b">Mêmes 3 variables que Gamma</text>
+<text x="1036" y="376.09" font-size="21" font-weight="400" fill="#16354b">Cible : coût / Gamma_aux</text>
+<text x="1036" y="430.46" font-size="22" font-weight="400" fill="#16354b">240 arbres · profondeur 2</text>
+<text x="1036" y="460.38" font-size="22" font-weight="400" fill="#16354b">Learning rate : 0,025</text>
+<text x="1036" y="490.29999999999995" font-size="22" font-weight="400" fill="#16354b">L2 : 100 · L1 : 1</text>
+<text x="1036" y="520.22" font-size="22" font-weight="400" fill="#16354b">Poids min. enfant : 100</text>
+<rect x="1456" y="224" width="400" height="328" rx="16" fill="#fbefe7" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1480" y="261.74" font-size="18" font-weight="700" fill="#b45c36">03  GAMMA CORRIGÉ RIDGE</text>
+<text x="1480" y="299.25" font-size="25" font-weight="700" fill="#16354b">sR = g × max(1 + c, ε)</text>
+<text x="1480" y="345.6" font-size="20" font-weight="400" fill="#16354b">Cible de c : coût / Gamma_aux − 1</text>
+<text x="1480" y="372.8" font-size="20" font-weight="400" fill="#16354b">Ridge : α = 10 · splines degré 2</text>
+<text x="1480" y="431.46" font-size="22" font-weight="400" fill="#16354b">Variables étendues :</text>
+<text x="1480" y="461.38" font-size="22" font-weight="400" fill="#16354b">conducteurs, technique/prix,</text>
+<text x="1480" y="491.29999999999995" font-size="22" font-weight="400" fill="#16354b">marque/modèle, département…</text>
+<text x="1480" y="521.22" font-size="22" font-weight="400" fill="#16354b">Fin de vente exclue.</text>
+<polyline points="516,382 580,382" fill="none" stroke="#b45c36" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="580,382 567.0,376.0 567.0,388.0" fill="#b45c36"/>
+<rect x="580" y="635" width="1276" height="137" rx="18" fill="#b45c36" stroke="none" stroke-width="1.4"/>
+<text x="604" y="671.74" font-size="18" font-weight="700" fill="#ffffff">04  GRAVITÉ RETENUE : MOYENNE PONDÉRÉE DES MONTANTS</text>
+<text x="786.28125" y="727.9" font-size="30" font-weight="700" fill="#ffffff">s(X) = 0,375 × g(X) + 0,375 × sX(X) + 0,25 × sR(X)</text>
+<polyline points="774,552 774,635" fill="none" stroke="#b45c36" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="774,635 780.0,622.0 768.0,622.0" fill="#b45c36"/>
+<polyline points="1212,552 1212,635" fill="none" stroke="#b45c36" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1212,635 1218.0,622.0 1206.0,622.0" fill="#b45c36"/>
+<polyline points="1656,552 1656,635" fill="none" stroke="#b45c36" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1656,635 1662.0,622.0 1650.0,622.0" fill="#b45c36"/>
+<rect x="64" y="840" width="452" height="164" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="877.74" font-size="18" font-weight="700" fill="#506777">DIAGNOSTIC SUR SINISTRÉS EXCLUS</text>
+<text x="88" y="915.18" font-size="26" font-weight="700" fill="#b45c36">RMSE gravité : 1 452,48 €</text>
+<text x="88" y="958.67" font-size="19" font-weight="400" fill="#506777">Cible conditionnelle, différente de la prime.</text>
+<rect x="580" y="840" width="1276" height="164" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="604" y="877.74" font-size="18" font-weight="700" fill="#506777">EXEMPLE PÉDAGOGIQUE FICTIF</text>
+<text x="604" y="913.18" font-size="26" font-weight="700" fill="#16354b">g = 2 000 € · sX = 2 400 € · sR = 2 600 € → s = 2 300 €</text>
+<text x="604" y="961.53" font-size="21" font-weight="400" fill="#16354b">Avec p = 8 % : prime = 0,08 × 2 300 = 184 €. La gravité est estimée pour tous les prospects.</text>
+</svg>

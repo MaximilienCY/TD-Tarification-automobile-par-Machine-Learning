@@ -1,0 +1,2 @@
+# Dépendances du modèle principal ; anciens environnements dans archive/requirements/.
+-r requirements-main.txt

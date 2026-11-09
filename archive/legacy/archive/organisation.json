@@ -1,0 +1,124 @@
+{
+  "base_commit": "602f280",
+  "moves": [
+    {
+      "source": "notebooks",
+      "destination": "archive/notebooks",
+      "files": 7,
+      "contents_preserved": true
+    },
+    {
+      "source": "reports",
+      "destination": "archive/reports",
+      "files": 144,
+      "contents_preserved": true
+    },
+    {
+      "source": "docs",
+      "destination": "archive/docs",
+      "files": 10,
+      "contents_preserved": true
+    },
+    {
+      "source": "deliverables",
+      "destination": "archive/deliverables",
+      "files": 12,
+      "contents_preserved": true
+    },
+    {
+      "source": "Calcul de la prime d'assurance.ipynb",
+      "destination": "archive/notebooks/Calcul de la prime d'assurance.ipynb",
+      "files": 1,
+      "contents_preserved": true
+    },
+    {
+      "source": "submission.csv",
+      "destination": "archive/submission_avant_promotion.csv",
+      "files": 1,
+      "contents_preserved": true
+    },
+    {
+      "source": "output",
+      "destination": "archive/output",
+      "files": 608,
+      "contents_preserved": true
+    }
+  ],
+  "note": "Les instantanés de notebooks et rapports sont conservés sans modification de leur contenu. Les modules Python partagés restent dans src/ et scripts/.",
+  "historical_tests": [
+    {
+      "source": "tests/test_anchored_model.py",
+      "destination": "archive/tests/test_anchored_model.py",
+      "sha256": "0c5e2e1e15e15e0f88455754749dd8422fa53bca3ef4a1421ebc19aa6157e0b2",
+      "contents_preserved": true
+    },
+    {
+      "source": "tests/test_contracts.py",
+      "destination": "archive/tests/test_contracts.py",
+      "sha256": "8e44edd63a3de3704fb9a57786401e7a49cae33d090b8d0503ce5fed2677d8c2",
+      "contents_preserved": true
+    },
+    {
+      "source": "tests/test_coverage_interactions.py",
+      "destination": "archive/tests/test_coverage_interactions.py",
+      "sha256": "5cc8c211222e3b95b915d3051bdfda6eba2c48d651960f238d4b2ddcf35e1cfb",
+      "contents_preserved": true
+    },
+    {
+      "source": "tests/test_frequency_refinement.py",
+      "destination": "archive/tests/test_frequency_refinement.py",
+      "sha256": "9c221018a9dd21546727f2b8c274d26bb44e1bd4edf7d28ec36a034d5328885c",
+      "contents_preserved": true
+    },
+    {
+      "source": "tests/test_research_models.py",
+      "destination": "archive/tests/test_research_models.py",
+      "sha256": "4ecdba975ad5c3efff4dda397856425efa2b5012a50198f0f97c0b80cba897ad",
+      "contents_preserved": true
+    },
+    {
+      "source": "tests/test_smooth_severity.py",
+      "destination": "archive/tests/test_smooth_severity.py",
+      "sha256": "aabd603498e4f8bb1d9d672e86a6e64e29ad8f2bd6bdd306a96c3f631b876561",
+      "contents_preserved": true
+    },
+    {
+      "source": "tests/test_restart_cache.py",
+      "destination": "archive/tests/test_restart_cache.py",
+      "sha256": "1407957554f955fc6d494ccd585cc1a3371c1e2fd86a123d2a5a15af4862c521",
+      "contents_preserved": true
+    }
+  ],
+  "historical_requirements": [
+    {
+      "source": "requirements.txt",
+      "destination": "archive/requirements/requirements.txt",
+      "sha256": "cf15d0d665bf73941d602af10e3ef7a546e4a8eafc4bd9946a3bb2806919d78a",
+      "contents_preserved": true
+    },
+    {
+      "source": "requirements-lock.txt",
+      "destination": "archive/requirements/requirements-lock.txt",
+      "sha256": "035082a5d08ed7b649f639d452a0a41e00283a2cf19b7929487c6c59c2308b82",
+      "contents_preserved": true
+    },
+    {
+      "source": "requirements-foundation.txt",
+      "destination": "archive/requirements/requirements-foundation.txt",
+      "sha256": "44f9f9b551fe688be77d5f413c37cb67b358721d1805961a9060e5a644f23467",
+      "contents_preserved": true
+    },
+    {
+      "source": "requirements-foundation-lock.txt",
+      "destination": "archive/requirements/requirements-foundation-lock.txt",
+      "sha256": "67e82bb804ebe2f4da1981af6d48a3e1fca6963b1b4ec27267b43c72da529a97",
+      "contents_preserved": true
+    },
+    {
+      "source": "requirements-research.txt",
+      "destination": "archive/requirements/requirements-research.txt",
+      "sha256": "f5341741724547a01b3c93accd807469fc02499c0d7a8ba8ae70edd1d02e25b1",
+      "contents_preserved": true
+    }
+  ]
+}

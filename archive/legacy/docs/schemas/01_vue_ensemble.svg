@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<title>01_vue_ensemble</title>
+<style>text {font-family: "DejaVu Sans", Arial, sans-serif;}</style>
+<rect x="0" y="0" width="1920" height="1080" rx="16" fill="#f6f7f4" stroke="none" stroke-width="1.4"/>
+<text x="64" y="53.67" font-size="19" font-weight="700" fill="#506777">TARIFICATION AUTOMOBILE  /  MODÈLE PRINCIPAL</text>
+<text x="1789.166015625" y="53.67" font-size="19" font-weight="400" fill="#506777">01 / 04</text>
+<text x="64" y="118.92" font-size="44" font-weight="700" fill="#16354b">Du contrat à la prime pure</text>
+<text x="64" y="163.32" font-size="24" font-weight="400" fill="#506777">Deux modèles complémentaires : risque de sinistre × coût moyen si sinistre.</text>
+<polyline points="64,187 1856,187" fill="none" stroke="#b9c6ca" stroke-width="1" stroke-linejoin="round"/>
+<text x="64" y="1052.88" font-size="16" font-weight="400" fill="#506777">VUE D’ENSEMBLE · Données → apprentissage → prédictions → soumission</text>
+<text x="1384.078125" y="1052.88" font-size="16" font-weight="400" fill="#506777">Source : modèle et diagnostics du dépôt · 20 octobre 2026</text>
+<rect x="64" y="222" width="450" height="500" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="259.74" font-size="18" font-weight="700" fill="#506777">01  DONNÉES ET PRÉPARATION</text>
+<text x="88" y="303.9" font-size="30" font-weight="700" fill="#16354b">50 000 contrats train</text>
+<text x="88" y="349.25" font-size="25" font-weight="400" fill="#16354b">45 785 clients</text>
+<text x="88" y="383.25" font-size="25" font-weight="400" fill="#16354b">2 917 sinistres : 5,834 %</text>
+<polyline points="88,417 490,417" fill="none" stroke="#b9c6ca" stroke-width="1" stroke-linejoin="round"/>
+<text x="88" y="462.25" font-size="25" font-weight="700" fill="#16354b">Comprendre et préparer</text>
+<text x="88" y="505.39" font-size="23" font-weight="400" fill="#16354b">Cibles, distributions, corrélations</text>
+<text x="88" y="536.67" font-size="23" font-weight="400" fill="#16354b">Valeurs manquantes et anomalies</text>
+<text x="88" y="567.95" font-size="23" font-weight="400" fill="#16354b">Encodages adaptés aux modèles</text>
+<text x="88" y="625.46" font-size="22" font-weight="400" fill="#506777">Identifiants, sexes et cibles</text>
+<text x="88" y="655.38" font-size="22" font-weight="400" fill="#506777">exclus des prédicteurs.</text>
+<text x="88" y="695.74" font-size="18" font-weight="400" fill="#506777">Traitements appris sur le train autorisé.</text>
+<rect x="620" y="222" width="600" height="205" rx="16" fill="#e7f3f0" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="644" y="259.74" font-size="18" font-weight="700" fill="#007b79">02A  FRÉQUENCE · TOUS LES CONTRATS</text>
+<text x="644" y="303.97" font-size="29" font-weight="700" fill="#16354b">Quelle probabilité de sinistre ?</text>
+<text x="644" y="348.25" font-size="25" font-weight="400" fill="#16354b">Logistique + correction par courbes</text>
+<text x="644" y="382.25" font-size="25" font-weight="400" fill="#16354b">Sortie : p(X), comprise entre 0 et 1</text>
+<text x="644" y="412.6" font-size="20" font-weight="400" fill="#007b79">Variables étendues, dont le département.</text>
+<rect x="620" y="500" width="600" height="222" rx="16" fill="#fbefe7" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="644" y="537.74" font-size="18" font-weight="700" fill="#b45c36">02B  GRAVITÉ · SINISTRES POSITIFS</text>
+<text x="644" y="581.97" font-size="29" font-weight="700" fill="#16354b">Quel coût moyen si sinistre ?</text>
+<text x="644" y="624.53" font-size="21" font-weight="400" fill="#16354b">37,5 % Gamma + 37,5 % Gamma corrigé XGB</text>
+<text x="644" y="653.0899999999999" font-size="21" font-weight="400" fill="#16354b">+ 25 % Gamma corrigé Ridge</text>
+<text x="644" y="699.46" font-size="22" font-weight="400" fill="#b45c36">Sortie : s(X), montant conditionnel en euros.</text>
+<polyline points="514,472 564,472 564,324 620,324" fill="none" stroke="#007b79" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="620,324 607.0,318.0 607.0,330.0" fill="#007b79"/>
+<polyline points="564,472 564,612 620,612" fill="none" stroke="#b45c36" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="620,612 607.0,606.0 607.0,618.0" fill="#b45c36"/>
+<rect x="1336" y="222" width="520" height="126" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1360" y="259.74" font-size="18" font-weight="700" fill="#506777">03  TEST : NOUVEAUX PROSPECTS</text>
+<text x="1360" y="295.25" font-size="25" font-weight="400" fill="#16354b">50 000 lignes, sans cibles connues</text>
+<text x="1360" y="329.6" font-size="20" font-weight="400" fill="#506777">Paramètres figés après l’apprentissage.</text>
+<polyline points="1596,348 1596,404" fill="none" stroke="#506777" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="1596,404 1602.0,391.0 1590.0,391.0" fill="#506777"/>
+<rect x="1336" y="404" width="520" height="242" rx="18" fill="#16354b" stroke="none" stroke-width="1.4"/>
+<text x="1360" y="445.81" font-size="17" font-weight="700" fill="#d8e4e8">04  COMBINAISON POUR CHAQUE PROSPECT</text>
+<text x="1379.98876953125" y="509.62" font-size="34" font-weight="700" fill="#ffffff">prime(X) = p(X) × s(X)</text>
+<text x="1360" y="563.39" font-size="23" font-weight="400" fill="#d8e4e8">Coût attendu de la période observée</text>
+<text x="1360" y="594.67" font-size="23" font-weight="400" fill="#d8e4e8">La probabilité reste continue.</text>
+<text x="1360" y="625.95" font-size="23" font-weight="400" fill="#d8e4e8">Aucun seuil oui/non avant multiplication.</text>
+<polyline points="1220,325 1280,325 1280,470 1336,470" fill="none" stroke="#007b79" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1336,470 1323.0,464.0 1323.0,476.0" fill="#007b79"/>
+<polyline points="1220,612 1280,612 1280,580 1336,580" fill="none" stroke="#b45c36" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1336,580 1323.0,574.0 1323.0,586.0" fill="#b45c36"/>
+<text x="1243" y="310.18" font-size="26" font-weight="700" fill="#007b79">p</text>
+<text x="1243" y="664.18" font-size="26" font-weight="700" fill="#b45c36">s</text>
+<rect x="64" y="802" width="1156" height="202" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="88" y="839.74" font-size="18" font-weight="700" fill="#506777">VALIDATION DES DEUX MODÈLES AVANT LE RÉAPPRENTISSAGE FINAL</text>
+<text x="88" y="876.11" font-size="27" font-weight="700" fill="#16354b">3 plis séparés par client → prédictions sur les clients exclus</text>
+<text x="88" y="920.25" font-size="25" font-weight="400" fill="#16354b">Recette fixe : RMSE de prime 541,916 € · calibration · erreurs par segment</text>
+<text x="88" y="968.39" font-size="23" font-weight="400" fill="#506777">Le test CSV n’est pas la validation : ses coûts ne sont pas connus localement.</text>
+<rect x="1336" y="752" width="520" height="252" rx="16" fill="#ffffff" stroke="#b9c6ca" stroke-width="1.4"/>
+<text x="1360" y="789.74" font-size="18" font-weight="700" fill="#506777">05  SOUMISSION</text>
+<text x="1360" y="835.76" font-size="32" font-weight="700" fill="#16354b">submission.csv</text>
+<text x="1360" y="884.25" font-size="25" font-weight="400" fill="#16354b">Colonnes : index, pred</text>
+<text x="1360" y="918.25" font-size="25" font-weight="400" fill="#16354b">Index : 50 000 à 99 999</text>
+<text x="1360" y="952.25" font-size="25" font-weight="400" fill="#16354b">pred = prime prédite en euros</text>
+<text x="1360" y="985.67" font-size="19" font-weight="400" fill="#506777">La RMSE est un score global, pas une colonne.</text>
+<polyline points="1596,646 1596,752" fill="none" stroke="#506777" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1596,752 1602.0,739.0 1590.0,739.0" fill="#506777"/>
+</svg>

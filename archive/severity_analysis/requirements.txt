@@ -1,0 +1,9 @@
+# Versions de l'environnement utilisé pour exécuter le notebook (Python 3.12).
+numpy==2.5.3
+pandas==3.0.6
+matplotlib==3.11.2
+scikit-learn==1.9.1
+joblib==1.6.0
+nbformat==5.9.1
+nbclient==0.8.0
+ipykernel==6.29.3

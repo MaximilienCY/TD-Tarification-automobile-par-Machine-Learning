@@ -1,0 +1,12 @@
+{
+  "frequency_source_preprocessing_parity": {
+    "training_rows": 5000,
+    "test_rows": 200,
+    "absolute_tolerance": 1e-10,
+    "logistic_E": true,
+    "xgboost_all_35_columns": true
+  },
+  "data_identical_across_branches": true,
+  "severity_artifact_preserved": true,
+  "shared_holdout_clients": true
+}

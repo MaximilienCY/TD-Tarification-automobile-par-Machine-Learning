@@ -1,0 +1,16 @@
+{
+  "validation_contracts": 10036,
+  "validation_positive_claims": 561,
+  "training_contracts": 39964,
+  "training_positive_claims": 2356,
+  "shared_clients": 0,
+  "premium_rmse_euros": 535.2139252761474,
+  "premium_mae_euros": 188.02042868114984,
+  "premium_predicted_observed_ratio": 1.0312934627109394,
+  "constant_premium_rmse_euros": 539.1193399813128,
+  "frequency_log_loss": 0.2060022263425704,
+  "frequency_auc": 0.666419463923732,
+  "frequency_brier": 0.05176080198291052,
+  "severity_rmse_euros": 1463.8060371386764,
+  "severity_mae_euros": 930.4937538818795
+}

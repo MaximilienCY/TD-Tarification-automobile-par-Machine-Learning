@@ -1,89 +1,96 @@
-# Modèle final de gravité automobile — XGBoost Gamma unique
+# Modèle global de tarification automobile — version principale
 
-Le modèle retenu prédit le **coût moyen d’un sinistre, sachant qu’un sinistre existe**.
-Il utilise **quatre variables** et conserve le **découpage 80/20 initial par client**.
-Aucun modèle de fréquence n’entre dans cette version finale.
+**Prime pure = probabilité de sinistre × coût conditionnel du sinistre.**
 
-**[Ouvrir le notebook de référence](gravite_xgboost/00_modele_final_gravite.ipynb)**
-— synthèse exécutable du modèle retenu, du découpage 80/20 et de ses résultats agrégés.
+Cette version fusionne la gravité de `main` et la fréquence de `projet-simplifie`.
+Le notebook principal est [modele_global.ipynb](modele_global.ipynb) ; `run.py`
+est le point d’entrée pour entraîner et prédire. Les versions précédentes sont
+dans [archive/](archive/README.md).
 
-## Modèle retenu et fichiers à utiliser
+## Composants retenus
 
-- **XGBoost Gamma avec lien logarithmique** : coût prédit positif.
-- **Variables** : `type_contrat`, `prix_vehicule`, `anciennete_vehicule`, `classe_geographique`.
-- **Réglages** : 400 arbres, profondeur 1, taux d’apprentissage 0,03 ; détails dans le manifeste.
-- **Modèle prêt à utiliser** : [`gravite_final.joblib`](gravite_xgboost/models/gravite_final.joblib).
-- **Configuration et contrôles** : [`gravite_final.json`](gravite_xgboost/models/gravite_final.json).
-- **Scores agrégés** : [`scores.csv`](gravite_xgboost/reports/final/scores.csv).
-- Les 50 000 coûts conditionnels du test sont générés localement par le script de prédiction ; les exports par contrat ne sont pas publiés.
+- **Gravité :** le XGBoost Gamma publié de `main`, conservé sans réentraînement.
+  Variables : `type_contrat`, `prix_vehicule`, `anciennete_vehicule`,
+  `classe_geographique`. Les sources, le référentiel et l’artefact original
+  sont dans `components/severity/`. La proposition exploratoire à trois variables
+  archivée n’est pas substituée à ce modèle publié.
+- **Fréquence :** recette finale de `projet-simplifie` (`682b3c5`) : mélange
+  **50 % logistique E à 17 variables métier + 50 % XGBoost recalibré**.
+  XGBoost moyenne quatre réglages et cinq graines, soit 20 modèles.
+  L’implémentation réutilisable est dans `src/pricing_model/frequency.py`.
+- **Modèle global :** produit des deux prédictions, sur les mêmes contrats et
+  dans l’ordre du fichier d’entrée. Aucune cible n’est utilisée à la prédiction.
 
-Le prix et l’ancienneté sont repris du dataset, avec remplacement des manquants
-par les médianes d’apprentissage. Le contrat est une catégorie observée. La classe
-géographique (urbain dense, urbain intermédiaire, rural, inconnu) vient du référentiel
-INSEE embarqué, rapproché des codes communaux. La taille de commune a été retirée.
-Les catégories sont encodées en indicatrices ; les valeurs numériques ne sont pas
-standardisées ni transformées en logarithme dans cette recette.
+Les matrices de préparation de la fréquence ont été comparées aux deux notebooks
+sources sur 5 000 contrats d’apprentissage et 200 de test : égalité numérique à
+`1e-10`, dont les 35 colonnes XGBoost. Les quatre
+réglages, les graines et le poids du mélange sont conservés. Le runtime commun
+utilise XGBoost CPU 3.0.2, compatible avec l’artefact de gravité ; la branche de
+fréquence déclarait 3.4.1. Les probabilités de cette intégration sont régénérées,
+avec le découpage commun ci-dessous, et ne sont pas présentées comme identiques
+aux anciens exports de cette branche.
 
-## Découpage final 80/20 et résultats
+## Découpage commun
 
-Le découpage sépare les clients du portefeuille complet avec
-`GroupShuffleSplit(test_size=0.20, random_state=2026)` :
+`GroupShuffleSplit(test_size=0.20, random_state=2026)` sur `id_client` :
 
-- **Apprentissage : 39 964 contrats, dont 2 356 sinistres positifs.**
-- **Validation : 10 036 contrats, dont 561 sinistres positifs.**
-- **Aucun client commun entre les deux jeux.**
+- Apprentissage : **39 964 contrats**, dont **2 356 sinistres positifs**.
+- Validation : **10 036 contrats**, dont **561 sinistres positifs**.
+- Aucun client commun.
 
-**RMSE sur les 561 sinistres de validation : 1 463,81 €** ; **MAE : 930,49 €**.
-Le modèle sauvegardé est ajusté uniquement sur les **2 356 sinistres d’apprentissage**.
-Les lignes de validation ne servent pas à son ajustement et aucun réentraînement
-sur ces lignes n’est effectué après l’évaluation.
+La fréquence est ajustée sur les seuls 80 %. Les taux cibles sont calculés hors
+pli par client. La calibration de Platt utilise les probabilités hors pli du
+développement, en excluant le premier pli comme dans la recette source. Le
+mélange reste fixé à 50/50. La gravité publiée reste inchangée, déjà ajustée sur
+les sinistrés de ces mêmes 80 %. Aucun composant n’est réentraîné sur les 20 %.
 
-La RMSE hors pli sur les trois plis par client du développement est de **1 448,34 €**.
-Ce score et le score du jeu de validation 20 % relèvent de protocoles différents.
-Les scores 90/10 des essais historiques ne sont pas ceux du modèle final 80/20.
-Les données ont déjà été explorées dans plusieurs expériences ; ces résultats ne
-constituent pas une validation externe neuve.
+**RMSE de prime sur les 10 036 contrats de validation : 535.21 €**,
+contre **539.12 €** pour la prime constante apprise sur les 80 %.
+Les mesures détaillées sont dans [reports/validation.json](reports/validation.json).
+Les anciens scores Kaggle et les scores des autres couples fréquence / gravité
+ne sont pas attribués à cette version. Les données ayant déjà été explorées,
+ce découpage ne constitue pas une validation externe neuve.
 
-## Pourquoi conserver le modèle unique ?
+## Utilisation
 
-La recherche initiale a comparé plusieurs réglages. Pour les essais Gamma, deux
-niveaux de complexité ont principalement été comparés ; aucune recherche exhaustive
-dédiée aux quatre variables finales n’a été menée. Les paramètres restent figés et
-les 20 % de validation ne sont pas utilisés pour les optimiser.
-
-Les modèles par tranches ajoutent une orientation et plusieurs experts sans gain
-stable démontré. Sur trois plis du développement, le modèle unique obtient
-1 448,34 € de RMSE, contre 1 450,00 € pour deux tranches. Sur le découpage historique
-90/10, les petits écarts entre modèle unique, deux et trois tranches ne permettent
-pas d’affirmer une supériorité générale. Le modèle unique est retenu pour sa simplicité.
-
-La synthèse publiée explique la cible, les quatre variables, les transformations,
-la validation, le choix du modèle unique et ses limites. Le notebook de recherche
-complet et les rapports individuels sont conservés dans le travail local.
-
-## Utiliser le modèle
-
-Depuis la racine du dépôt, avec Python 3.12 :
+Avec Python 3.12 et les dépendances de `requirements.txt` :
 
 ```sh
-python3 -m venv gravite_xgboost/.venv
-gravite_xgboost/.venv/bin/python -m pip install -r gravite_xgboost/requirements.txt
-gravite_xgboost/.venv/bin/python gravite_xgboost/predict_final.py --input Data/test.csv --output gravite_predictions.csv
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python run.py verify
+.venv/bin/python run.py predict --input Data/test.csv --output outputs/submission.csv --components outputs/test_components.csv
 ```
 
-Le fichier d’entrée doit conserver le format du test initial. La pipeline génère
-les quatre variables utilisées ; le résultat contient `index,gravite_predite`.
-Les sorties sont des **gravités conditionnelles**, pas des primes.
-
-Pour reconstruire seulement l’export final, avec le même 80/20 :
+Pour reconstruire la fréquence, conserver la gravité, évaluer puis exporter :
 
 ```sh
-gravite_xgboost/.venv/bin/python gravite_xgboost/run_final_notebook.py
+.venv/bin/python run.py train --threads 2
 ```
 
-Les dépendances sont figées dans `gravite_xgboost/requirements.txt`. Les données,
-les sources et le modèle sont identifiés par leurs empreintes dans le manifeste.
-Seuls les scores et effectifs agrégés sont publiés dans
-[`reports/final/`](gravite_xgboost/reports/final/). Les découpages clients et les
-prédictions par contrat restent locaux et sont exclus du suivi Git. Les limites
-du rapprochement géographique sont détaillées dans le notebook de synthèse.
+Cette commande ajuste les 20 modèles dans cinq plis de calibration puis les 20
+modèles finaux. Le modèle combiné prêt à utiliser est `models/global_model.joblib`,
+avec ses paramètres, origines et contrôles dans `models/global_model.json`.
+
+La soumission courante est **`outputs/submission.csv`**, colonnes **`index,pred`**.
+`pred` est la prime pure ; les composantes sont dans `outputs/test_components.csv`.
+Les exports individuels restent locaux et sont ignorés par Git. Le modèle et
+les résultats agrégés sont versionnés. Aucune soumission Kaggle n’est automatique.
+
+## Organisation
+
+```text
+modele_global.ipynb          notebook principal
+run.py                      entraîner, prédire, vérifier
+src/pricing_model/          fréquence et combinaison
+components/severity/        gravité publiée inchangée
+models/                     modèle global et manifeste
+reports/                    évaluation agrégée
+Data/                       données source communes
+outputs/                    soumission et prédictions locales
+archive/                    versions précédentes et recherches
+tests/                      contrôles du modèle actuel
+integration_sources.json    branches et commits d’origine
+```
+
+Tests : `python -m pytest`. Les tests des archives ne sont pas collectés.
